@@ -1,0 +1,3236 @@
+{
+  "dataset_name": "synthetic_stratified_benchmark",
+  "description": "80-record stratified synthetic benchmark across all 8 evaluation strata (structured, short_open_text, difficult_contextual, long_narrative, household_grid, ocr_form, handwriting_scan, adversarial) with planted ground-truth secrets, OCR confidence, structured household columns, and must-survive fragments for acceptance-gate verification.",
+  "schema_version": "1.0",
+  "count": 80,
+  "records": [
+    {
+      "ResponseId": "G00000",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0000",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager shouted at me in the break room. I do not want my employer to find out I said this. I am part of the reference site.",
+      "QID42": "I hold a security clearance. An overseas account uses IBAN GB94WEST979875920785.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "cohort",
+          "literal": "the reference site",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "clearance",
+          "literal": "a security clearance",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "iban",
+          "literal": "GB94WEST979875920785",
+          "expect_category": "iban",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00001",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0000",
+      "UserLanguage": "EN-AU",
+      "QID41": "I have been struggling since this started and it has left me with chronic fatigue. I do not want my employer to find out I said this.",
+      "QID42": "I am a grants administrator, EL3, in the complaints branch, with 27 years of service. Nobody has done anything about it. I have worked in our freight terminal for years. I came through the 2021 intake. My AGS number: 46057050.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "workplace_type",
+          "literal": "our freight terminal",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "cohort",
+          "literal": "the 2021 intake",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "employee_ref",
+          "literal": "46057050",
+          "expect_category": "reference_id",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00002",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0000",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager shouted at me in the break room. I am a truck driver, Grade 4, 29 years of service, on the store team of a team of 5.",
+      "QID42": "I am done pretending it is fine. My role sits in the state office. Reach me on ０４８７ ３８５ ６０５. My address is a h m e d . w h i t l a m @ g r o u p . c o m . a u.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "aps_unit",
+          "literal": "the state office",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "phone_obfuscated",
+          "literal": "０４８７ ３８５ ６０５",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "fullwidth",
+          "mandatory": true
+        },
+        {
+          "kind": "email_spaced",
+          "literal": "a h m e d . w h i t l a m @ g r o u p . c o m . a u",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "spaced",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00003",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0001",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. I feel safe raising concerns here. everything has been paid on time for two years. I am not the only one who feels this way. I am a investigator, EL3, in the digital services branch, with 7 years of service.",
+      "QID42": "It has been going on for months. Email me at jane.sinclair@mail.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "jane.sinclair@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "I feel",
+        "everything has"
+      ]
+    },
+    {
+      "ResponseId": "G00004",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "hazard",
+      "household_id": "HH0001",
+      "UserLanguage": "EN-AU",
+      "respondent_name": "Lena Sinclair",
+      "household_members": "Lena Sinclair; Grace Sinclair",
+      "QID41": "I probably should not have said this, but the consultation happened after the decision was made. the decision does not match what the specialist wrote. I do not want my employer to find out I said this.",
+      "QID42": "Nobody has done anything about it. My partner Grace Sinclair and I (Lena Sinclair) both experienced this.",
+      "stratum": "household_grid",
+      "secrets": [
+        {
+          "kind": "cross_field_person",
+          "literal": "Grace Sinclair",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "cross_field_person",
+          "literal": "Lena Sinclair",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the consultation",
+        "the decision"
+      ]
+    },
+    {
+      "ResponseId": "G00005",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0001",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.58,
+      "QID41": "For what it is worth, no complaints.",
+      "QID42": "TFN: 646 2I0 970.",
+      "stratum": "ocr_form",
+      "secrets": [
+        {
+          "kind": "ocr_tfn",
+          "literal": "646 2I0 970",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "ocr_corrupted",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "no complaints"
+      ]
+    },
+    {
+      "ResponseId": "G00006",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0002",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.65,
+      "QID41": "I probably should not have said this, but I have been struggling since this started and it has left me with a shoulder injury.",
+      "QID42": "It has been going on for months. TFN: 879 887 3O2.",
+      "stratum": "handwriting_scan",
+      "secrets": [
+        {
+          "kind": "ocr_tfn",
+          "literal": "879 887 3O2",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "ocr_corrupted",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00007",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0002",
+      "UserLanguage": "EN-AU",
+      "QID41": "To be honest, My manager targeted me in meetings until I cried. I am a fund manager, Level 4, 19 years of service, on the roster of a team of 4. It has been going on for months. My TFN is 416 991 653 if you need to look me up.",
+      "QID42": "The employer ACN is 790 661 595 if that is useful. I work in the complaints branch.",
+      "stratum": "adversarial",
+      "secrets": [
+        {
+          "kind": "tfn",
+          "literal": "416 991 653",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "acn",
+          "literal": "790 661 595",
+          "expect_category": "acn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "aps_unit",
+          "literal": "the complaints branch",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "targeted me"
+      ]
+    },
+    {
+      "ResponseId": "G00008",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0002",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. For what it is worth, I have been struggling since this started and it has left me with migraines. I would rather not say too much in writing. I am a site supervisor, Level 4, 21 years of service, on the ward team of a team of 13. It has been going on for months. Email me at marisol.abadi@group.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "marisol.abadi@group.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00009",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "hazard",
+      "household_id": "HH0003",
+      "UserLanguage": "EN-AU",
+      "QID41": "working from home means nobody sees how bad it has got. the refund has not landed and nobody owns the delay. This is anonymous but the detail is real. It has been going on for months. My TFN is 473 438 659 if you need to look me up. My site is Dandenong store.",
+      "QID42": "Driver licence: 47958615.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "tfn",
+          "literal": "473 438 659",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "site",
+          "literal": "Dandenong store",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": false
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "47958615",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "working from",
+        "the refund"
+      ]
+    },
+    {
+      "ResponseId": "G00010",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0003",
+      "UserLanguage": "EN-AU",
+      "QID41": "For what it is worth, My manager targeted me in meetings until I cried. I have raised it twice now. Reach me on ０８９２０８ ３９６６.",
+      "QID42": "My AGS number: 96902262. An overseas account uses IBAN GB68WEST167524388269.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "phone_obfuscated",
+          "literal": "０８９２０８ ３９６６",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "fullwidth",
+          "mandatory": true
+        },
+        {
+          "kind": "employee_ref",
+          "literal": "96902262",
+          "expect_category": "reference_id",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "iban",
+          "literal": "GB68WEST167524388269",
+          "expect_category": "iban",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "targeted me"
+      ]
+    },
+    {
+      "ResponseId": "G00011",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0003",
+      "UserLanguage": "EN-AU",
+      "QID41": "Long story short, My manager excluded me from the roster after I complained. I am not the only one who feels this way.",
+      "QID42": "I am a mine supervisor, Grade 3, 16 years of service, on the roster of a team of 13. I have raised it twice now. For context I work at Northline Services. It all happened whe nthey closed the Box Hill store. Driver licence: 40030506.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "organisation",
+          "literal": "Northline Services",
+          "expect_category": "organisation_name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "implication_workplace",
+          "literal": "whe nthey closed the Box Hill store",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "misspelled",
+          "mandatory": false
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "40030506",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "excluded me"
+      ]
+    },
+    {
+      "ResponseId": "G00012",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "service",
+      "household_id": "HH0004",
+      "UserLanguage": "EN-AU",
+      "QID41": "Cover wise, the physiotherapist was thorough and did not rush me. I have raised it twice now.",
+      "QID42": "Realistically I am nobody else does the late round. Last year we handled a gateway review. I am part of the review team.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "implication_person",
+          "literal": "nobody else does the late round",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "lower",
+          "mandatory": false
+        },
+        {
+          "kind": "government_act",
+          "literal": "a gateway review",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "cohort",
+          "literal": "the review team",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the physiotherapist"
+      ]
+    },
+    {
+      "ResponseId": "G00013",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0004",
+      "UserLanguage": "EN-AU",
+      "QID41": "my supervisor listens and acts on it.",
+      "QID42": "the claim was paid without argument. I just needed to put it somewhere.",
+      "stratum": "structured",
+      "secrets": [],
+      "must_survive": [
+        "my supervisor",
+        "the claim"
+      ]
+    },
+    {
+      "ResponseId": "G00014",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0004",
+      "UserLanguage": "EN-AU",
+      "QID41": "the training here is genuinely good. everything has been paid on time for two years.",
+      "QID42": "I am a statistician, EL2, in the complaints branch, with 27 years of service. It has been going on for months. I am based in Surry Hills these days. I have worked in a community health centre for years. My passport number is P5505833 if that helps.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "suburb",
+          "literal": "Surry Hills",
+          "expect_category": "location",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "workplace_type",
+          "literal": "a community health centre",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "passport",
+          "literal": "P5505833",
+          "expect_category": "passport",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the training",
+        "everything has"
+      ]
+    },
+    {
+      "ResponseId": "G00015",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0005",
+      "UserLanguage": "EN-AU",
+      "QID41": "I have thought about this for weeks.",
+      "QID42": "My manager threatened me when I raised a safety issue. I am done pretending it is fine. My TFN is 491 253 669 if you need to look me up. It all happened after hte merger announcement. The gateway logs show 2001:0db8:9a3b:6bad:1a1d:3a0d:dfea:280a for my session.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "tfn",
+          "literal": "491 253 669",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "implication_workplace",
+          "literal": "after hte merger announcement",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "misspelled",
+          "mandatory": false
+        },
+        {
+          "kind": "ipv6",
+          "literal": "2001:0db8:9a3b:6bad:1a1d:3a0d:dfea:280a",
+          "expect_category": "ipv6",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "threatened me"
+      ]
+    },
+    {
+      "ResponseId": "G00016",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0005",
+      "UserLanguage": "EN-AU",
+      "QID41": "To be honest, My manager excluded me from the roster after I complained. I am a case officer, APS 6, in the complaints branch, with 23 years of service. It has been going on for months.",
+      "QID42": "My site is Fremattle yard. My CRN is 565 383 433Z from an old claim. The enrolment reference is 4 8459 3363 1.",
+      "stratum": "adversarial",
+      "secrets": [
+        {
+          "kind": "site",
+          "literal": "Fremattle yard",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "misspelled",
+          "mandatory": false
+        },
+        {
+          "kind": "centrelink_crn",
+          "literal": "565 383 433Z",
+          "expect_category": "centrelink_crn",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "medicare_enrolment",
+          "literal": "4 8459 3363 1",
+          "expect_category": "medicare_enrolment",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "excluded me"
+      ]
+    },
+    {
+      "ResponseId": "G00017",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0005",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager threatened me when I raised a safety issue. I have raised it twice now.",
+      "QID42": "DOB 27/02/1957, just so the age gap is clear. Driver licence: 31261239. The enrolment reference is 5 6127 3076 5.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "dob",
+          "literal": "27/02/1957",
+          "expect_category": "date_au",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "31261239",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "medicare_enrolment",
+          "literal": "5 6127 3076 5",
+          "expect_category": "medicare_enrolment",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "threatened me"
+      ]
+    },
+    {
+      "ResponseId": "G00018",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0006",
+      "UserLanguage": "EN-AU",
+      "QID41": "Long story short, THIS IS UNACCEPTABLE AND I WANT SOMEONE TO OWN IT.",
+      "QID42": "",
+      "stratum": "structured",
+      "secrets": [],
+      "must_survive": [
+        "THIS IS"
+      ]
+    },
+    {
+      "ResponseId": "G00019",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "service",
+      "household_id": "HH0006",
+      "UserLanguage": "EN-AU",
+      "QID41": "Cover wise, nobody could tell me where the file had gone. I am done pretending it is fine. My TFN is 534 233 841 if you need to look me up. The employer ACN is 900 044 117 if that is useful.",
+      "QID42": "An overseas account uses IBAN GB32WEST460730003920.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "tfn",
+          "literal": "534 233 841",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "acn",
+          "literal": "900 044 117",
+          "expect_category": "acn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "iban",
+          "literal": "GB32WEST460730003920",
+          "expect_category": "iban",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "nobody could"
+      ]
+    },
+    {
+      "ResponseId": "G00020",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0006",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.61,
+      "QID41": "For what it is worth, I have been struggling since this started and it has left me with a shoulder injury. I am done pretending it is fine.",
+      "QID42": "TFN: 786 7O4 747.",
+      "stratum": "ocr_form",
+      "secrets": [
+        {
+          "kind": "ocr_tfn",
+          "literal": "786 7O4 747",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "ocr_corrupted",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00021",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "service",
+      "household_id": "HH0007",
+      "UserLanguage": "EN-AU",
+      "QID41": "To be honest, Cover wise, everything has been paid on time for two years.",
+      "QID42": "I do not want my employer to find out I said this. I work out of Dandenong store most weeks. It was my manager Fiona who signed it off. I live at 178 Swanston Avenue.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "site",
+          "literal": "Dandenong store",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": false
+        },
+        {
+          "kind": "third_party",
+          "literal": "my manager Fiona",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "street_address",
+          "literal": "178 Swanston Avenue",
+          "expect_category": "street_address",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "everything has"
+      ]
+    },
+    {
+      "ResponseId": "G00022",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0007",
+      "UserLanguage": "EN-AU",
+      "QID41": "To be honest, My manager shouted at me in the break room. I would rather not say too much in writing. Nobody has done anything about it.",
+      "QID42": "My Medicare number is 2 2644 0359 5. The employer ACN is 838 418 947 if that is useful. My CRN is 752 224 524B from an old claim.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "medicare",
+          "literal": "2 2644 0359 5",
+          "expect_category": "medicare",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "acn",
+          "literal": "838 418 947",
+          "expect_category": "acn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "centrelink_crn",
+          "literal": "752 224 524B",
+          "expect_category": "centrelink_crn",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00023",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0007",
+      "UserLanguage": "EN-AU",
+      "QID41": "I have been struggling since this started and it has left me with anxiety. I am not the only one who feels this way. I am a contracts officer, APS 4, in Services division, with 22 years of service. BSB 527517 if you need to run a report. My role sits in Migration directorate.",
+      "QID42": "I am APS 6 and that makes me one of very few.",
+      "stratum": "adversarial",
+      "secrets": [
+        {
+          "kind": "bsb",
+          "literal": "527517",
+          "expect_category": "bsb",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "aps_unit",
+          "literal": "Migration directorate",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "aps_level",
+          "literal": "APS 6",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00024",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0008",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. my supervisor listens and acts on it.",
+      "QID42": "everything has been paid on time for two years. I would rather not say too much in writing. I am a care worker, Step 3, 19 years of service, on the store team of a team of 7. I have raised it twice now. Email me at daniel.abadi@mail.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "daniel.abadi@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "my supervisor",
+        "everything has"
+      ]
+    },
+    {
+      "ResponseId": "G00025",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0008",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. My manager shouted at me in the break room. Please do not share this with my team. I work at Corvus Group as a teacher.",
+      "QID42": "Nobody has done anything about it. Email me at priya.sinclair@connect.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "priya.sinclair@connect.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00026",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0008",
+      "UserLanguage": "EN-AU",
+      "QID41": "I have thought about this for weeks. My manager shouted at me in the break room. This is anonymous but the detail is real. It has been going on for months. Realistically I am I cover all three depots on my own. There are two of us left in the enforcement directorate.",
+      "QID42": "I am based in a correctional centre.",
+      "stratum": "adversarial",
+      "secrets": [
+        {
+          "kind": "implication_person",
+          "literal": "I cover all three depots on my own",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "leet",
+          "mandatory": false
+        },
+        {
+          "kind": "seniority_in_unit",
+          "literal": "the enforcement directorate",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "workplace_type",
+          "literal": "a correctional centre",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00027",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0009",
+      "UserLanguage": "EN-AU",
+      "QID41": "Long story short, My manager constantly undermined in front of the team.",
+      "QID42": "It has been going on for months.",
+      "stratum": "short_open_text",
+      "secrets": [],
+      "must_survive": [
+        "constantly undermined"
+      ]
+    },
+    {
+      "ResponseId": "G00028",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0009",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager constantly undermined in front of the team. This is anonymous but the detail is real. I am part of the graduate cohort. My CRN is 651 622 766C from an old claim.",
+      "QID42": "My AGS number: 43230174.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "cohort",
+          "literal": "the graduate cohort",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "centrelink_crn",
+          "literal": "651 622 766C",
+          "expect_category": "centrelink_crn",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "employee_ref",
+          "literal": "43230174",
+          "expect_category": "reference_id",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "constantly undermined"
+      ]
+    },
+    {
+      "ResponseId": "G00029",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0009",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager excluded me from the roster after I complained. I am a relationship manager, Grade 4, 8 years of service, on the night shift of a team of 11.",
+      "QID42": "It has been going on for months.",
+      "stratum": "short_open_text",
+      "secrets": [],
+      "must_survive": [
+        "excluded me"
+      ]
+    },
+    {
+      "ResponseId": "G00030",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0010",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager made comments about my age whenever I pushed back. This is anonymous but the detail is real. I am a case officer, EL3, in the digital services branch, with 25 years of service. I just needed to put it somewhere. My title is eligibility specialist.",
+      "QID42": "It went through a ministerial submission. It took years to get national security vetting.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "public_role",
+          "literal": "eligibility specialist",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "government_act",
+          "literal": "a ministerial submission",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "clearance",
+          "literal": "national security vetting",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "made comments"
+      ]
+    },
+    {
+      "ResponseId": "G00031",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0010",
+      "UserLanguage": "EN-AU",
+      "QID41": "Long story short, THIS IS UNACCEPTABLE AND I WANT SOMEONE TO OWN IT. This is anonymous but the detail is real. I am a cleaner, Grade 4, 9 years of service, on the ward team of a team of 11. It has been going on for months. It all happened when they closed the Box Hill store. Driver licence: 46673945.",
+      "QID42": "My CRN is 812 498 953K from an old claim.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "implication_workplace",
+          "literal": "when they closed the Box Hill store",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": false
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "46673945",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "centrelink_crn",
+          "literal": "812 498 953K",
+          "expect_category": "centrelink_crn",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "THIS IS"
+      ]
+    },
+    {
+      "ResponseId": "G00032",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "hazard",
+      "household_id": "HH0010",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.61,
+      "QID41": "To be honest, working from home means nobody sees how bad it has got.",
+      "QID42": "three months and still chasing a claim of four hundred dollars. I am a labourer, Grade 3, 29 years of service, on the yard team of a team of 13. I am done pretending it is fine. TFN: 872 O54 670.",
+      "stratum": "handwriting_scan",
+      "secrets": [
+        {
+          "kind": "ocr_tfn",
+          "literal": "872 O54 670",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "ocr_corrupted",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "working from",
+        "three months"
+      ]
+    },
+    {
+      "ResponseId": "G00033",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0011",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager retaliated against me the week I reported it.",
+      "QID42": "I am not the only one who feels this way. I am a contracts officer, EL4, in the complaints branch, with 29 years of service. I have raised it twice now. My site is Fremantle yard. The enrolment reference is 4 9076 3729 0. The gateway logs show 2001:0db8:982f:fd31:f38d:62ac:e0b8:779a for my session.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "site",
+          "literal": "Fremantle yard",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": false
+        },
+        {
+          "kind": "medicare_enrolment",
+          "literal": "4 9076 3729 0",
+          "expect_category": "medicare_enrolment",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "ipv6",
+          "literal": "2001:0db8:982f:fd31:f38d:62ac:e0b8:779a",
+          "expect_category": "ipv6",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "retaliated against"
+      ]
+    },
+    {
+      "ResponseId": "G00034",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0011",
+      "UserLanguage": "EN-AU",
+      "respondent_name": "Aoife Brennan",
+      "household_members": "Aoife Brennan; Lena Brennan",
+      "QID41": "Long story short, fine i guess Nobody has done anything about it.",
+      "QID42": "My partner Lena Brennan and I (Aoife Brennan) both experienced this.",
+      "stratum": "household_grid",
+      "secrets": [
+        {
+          "kind": "cross_field_person",
+          "literal": "Lena Brennan",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "cross_field_person",
+          "literal": "Aoife Brennan",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "fine i"
+      ]
+    },
+    {
+      "ResponseId": "G00035",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0011",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.73,
+      "QID41": "My manager humiliated me in front of the new starters. I am a labourer, Class 2, 4 years of service, on the store team of a team of 2. Nobody has done anything about it.",
+      "QID42": "TFN: I40 537 822.",
+      "stratum": "handwriting_scan",
+      "secrets": [
+        {
+          "kind": "ocr_tfn",
+          "literal": "I40 537 822",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "ocr_corrupted",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "humiliated me"
+      ]
+    },
+    {
+      "ResponseId": "G00036",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0012",
+      "UserLanguage": "EN-AU",
+      "QID41": "I probably should not have said this, but My manager targeted me in meetings until I cried. I would rather not say too much in writing. My site is Newcastle terminal. Last year we handled a cabinet submission.",
+      "QID42": "I am based in our freight terminal.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "site",
+          "literal": "Newcastle terminal",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "fullwidth",
+          "mandatory": false
+        },
+        {
+          "kind": "government_act",
+          "literal": "a cabinet submission",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "workplace_type",
+          "literal": "our freight terminal",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "targeted me"
+      ]
+    },
+    {
+      "ResponseId": "G00037",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0012",
+      "UserLanguage": "EN-AU",
+      "QID41": "same as last year I am a branch manager, EL3, in the digital services branch, with 16 years of service.",
+      "QID42": "I am done pretending it is fine.",
+      "stratum": "adversarial",
+      "secrets": [],
+      "must_survive": [
+        "same as"
+      ]
+    },
+    {
+      "ResponseId": "G00038",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0012",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. To be honest, the flexible roster makes a real difference. the referral was approved the same day. Please do not share this with my team. I work at Northline Services as a barista. Nobody has done anything about it. Email me at kiran.petrov@corp.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "kiran.petrov@corp.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the flexible",
+        "the referral"
+      ]
+    },
+    {
+      "ResponseId": "G00039",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "service",
+      "household_id": "HH0013",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.6,
+      "QID41": "Cover wise, everything has been paid on time for two years.",
+      "QID42": "I am not the only one who feels this way. I am done pretending it is fine. TFN: 995 938 2I3.",
+      "stratum": "ocr_form",
+      "secrets": [
+        {
+          "kind": "ocr_tfn",
+          "literal": "995 938 2I3",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "ocr_corrupted",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "everything has"
+      ]
+    },
+    {
+      "ResponseId": "G00040",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0013",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. Long story short, My manager targeted me in meetings until I cried. I would rather not say too much in writing. I am a compliance officer, APS 4, in the integrity unit, with 4 years of service. I am done pretending it is fine. Email me at hassan.sinclair@connect.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "hassan.sinclair@connect.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "targeted me"
+      ]
+    },
+    {
+      "ResponseId": "G00041",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0013",
+      "UserLanguage": "EN-AU",
+      "QID41": "Long story short, I have been struggling since this started and it has left me with chronic fatigue. I would rather not say too much in writing. I have raised it twice now. It was my supervisor Ahmed who signed it off.",
+      "QID42": "I am EL2 and that makes me one of very few. I live at 50 Macquarie Street.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "third_party",
+          "literal": "my supervisor Ahmed",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "aps_level",
+          "literal": "EL2",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "street_address",
+          "literal": "50 Macquarie Street",
+          "expect_category": "street_address",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00042",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "hazard",
+      "household_id": "HH0014",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. I probably should not have said this, but I have been off sick twice this quarter and neither was discussed. I was put on hold for an hour and then cut off. I would rather not say too much in writing. I am done pretending it is fine. Email me at kiran.brennan@connect.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "kiran.brennan@connect.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "I have",
+        "I was"
+      ]
+    },
+    {
+      "ResponseId": "G00043",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0014",
+      "UserLanguage": "EN-AU",
+      "QID41": "I have thought about this for weeks. I have been struggling since this started and it has left me with depression. I just needed to put it somewhere.",
+      "QID42": "You can reach me on 089584 6067 if that helps. It was told my supervisor Grace who signed it off. An overseas account uses IBAN GB44WEST544913730585.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "phone",
+          "literal": "089584 6067",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "third_party",
+          "literal": "told my supervisor Grace",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "iban",
+          "literal": "GB44WEST544913730585",
+          "expect_category": "iban",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00044",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0014",
+      "UserLanguage": "EN-AU",
+      "QID41": "I probably should not have said this, but I feel safe raising concerns here. the referral was approved the same day. I am not the only one who feels this way. I have raised it twice now. Pay me on 555534 8585 9597 1539 if it is easier. DOB 20/12/1996, just so the age gap is clear.",
+      "QID42": "The laptop MAC 3F:9E:8B:B6:14:EF was recorded.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "credit_card",
+          "literal": "555534 8585 9597 1539",
+          "expect_category": "credit_card",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "dob",
+          "literal": "20/12/1996",
+          "expect_category": "date_au",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "mac_address",
+          "literal": "3F:9E:8B:B6:14:EF",
+          "expect_category": "mac",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "I feel",
+        "the referral"
+      ]
+    },
+    {
+      "ResponseId": "G00045",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0015",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. To be honest, My manager humiliated me in front of the new starters. This is anonymous but the detail is real. I am a electrician, Band 6, 16 years of service, on the day shift of a team of 5. Email me at daniel.petrov@mail.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "daniel.petrov@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "humiliated me"
+      ]
+    },
+    {
+      "ResponseId": "G00046",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "service",
+      "household_id": "HH0015",
+      "UserLanguage": "EN-AU",
+      "QID41": "Long story short, Cover wise, the pre-approval took four months and was never needed. I am a policy officer, EL4, in the regional office, with 7 years of service. Nobody has done anything about it. BSB 267330 if you need to run a report.",
+      "QID42": "My role sits in the complaints branch. The enrolment reference is 1 5618 5510 4.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "bsb",
+          "literal": "267330",
+          "expect_category": "bsb",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "aps_unit",
+          "literal": "the complaints branch",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "medicare_enrolment",
+          "literal": "1 5618 5510 4",
+          "expect_category": "medicare_enrolment",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the pre-approval"
+      ]
+    },
+    {
+      "ResponseId": "G00047",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0015",
+      "UserLanguage": "EN-AU",
+      "QID41": "the training here is genuinely good. whoever answers the phone was polite and knew my name. I do not want my employer to find out I said this. I am a grants administrator, EL6, in the regional office, with 12 years of service. I am done pretending it is fine.",
+      "QID42": "Email me at daniel.petrov@mail.com.au if you need more detail. I work out of Altona distribution centre most weeks. I am based in a correctional centre.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "daniel.petrov@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "site",
+          "literal": "Altona distribution centre",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": false
+        },
+        {
+          "kind": "workplace_type",
+          "literal": "a correctional centre",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the training",
+        "whoever answers"
+      ]
+    },
+    {
+      "ResponseId": "G00048",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0016",
+      "UserLanguage": "EN-AU",
+      "QID41": "For what it is worth, I have been struggling since this started and it has left me with chronic fatigue. Please do not share this with my team. I am done pretending it is fine.",
+      "QID42": "DOB 23/07/1973, just so the age gap is clear. My address is h a s s a n . k o w a l s k i @ c o r p . c o m . a u. Driver licence: 24284149.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "dob",
+          "literal": "23/07/1973",
+          "expect_category": "date_au",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "email_spaced",
+          "literal": "h a s s a n . k o w a l s k i @ c o r p . c o m . a u",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "spaced",
+          "mandatory": true
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "24284149",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00049",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0016",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. I have thought about this for weeks. I have been struggling since this started and it has left me with depression. I am not the only one who feels this way. I have raised it twice now. Email me at kiran.sinclair@mail.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "kiran.sinclair@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00050",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0016",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager humiliated me in front of the new starters. I do not want my employer to find out I said this. I am a policy adviser, APS 4, in the complaints branch, with 15 years of service.",
+      "QID42": "Nobody has done anything about it. Email me at jane.nakamura@mail.com.au if you need more detail. Pay me on 378282 9925 9997 2116 if it is easier. Reach me on ０４７５ １３９ ３７０.",
+      "stratum": "adversarial",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "jane.nakamura@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "credit_card",
+          "literal": "378282 9925 9997 2116",
+          "expect_category": "credit_card",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "phone_obfuscated",
+          "literal": "０４７５ １３９ ３７０",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "fullwidth",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "humiliated me"
+      ]
+    },
+    {
+      "ResponseId": "G00051",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0017",
+      "UserLanguage": "EN-AU",
+      "respondent_name": "Grace Sinclair",
+      "household_members": "Grace Sinclair; Aoife Sinclair",
+      "QID41": "THIS IS UNACCEPTABLE AND I WANT SOMEONE TO OWN IT.",
+      "QID42": "It has been going on for months. My partner Aoife Sinclair and I (Grace Sinclair) both experienced this.",
+      "stratum": "household_grid",
+      "secrets": [
+        {
+          "kind": "cross_field_person",
+          "literal": "Aoife Sinclair",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "cross_field_person",
+          "literal": "Grace Sinclair",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "THIS IS"
+      ]
+    },
+    {
+      "ResponseId": "G00052",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0017",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager retaliated against me the week I reported it. I am not the only one who feels this way. I am done pretending it is fine. You can reach me on 0470 309 170 if that helps. The employer ACN is 290 166 755 if that is useful.",
+      "QID42": "Realistically I am I   c o v e r   a l l   t h r e e   d e p o t s   o n   m y   o w n.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "phone",
+          "literal": "0470 309 170",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "acn",
+          "literal": "290 166 755",
+          "expect_category": "acn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "implication_person",
+          "literal": "I   c o v e r   a l l   t h r e e   d e p o t s   o n   m y   o w n",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "spaced",
+          "mandatory": false
+        }
+      ],
+      "must_survive": [
+        "retaliated against"
+      ]
+    },
+    {
+      "ResponseId": "G00053",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0017",
+      "UserLanguage": "EN-AU",
+      "QID41": "same as last year I am a mine supervisor, Grade 4, 4 years of service, on the yard team of a team of 4.",
+      "QID42": "Nobody has done anything about it.",
+      "stratum": "difficult_contextual",
+      "secrets": [],
+      "must_survive": [
+        "same as"
+      ]
+    },
+    {
+      "ResponseId": "G00054",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0018",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager targeted me in meetings until I cried. I would rather not say too much in writing. Nobody has done anything about it.",
+      "QID42": "It took years to get clearance at the secret level. Driver licence: 13480793. I live at 126 Elizabeth Avenue.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "clearance",
+          "literal": "clearance at the secret level",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "13480793",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "street_address",
+          "literal": "126 Elizabeth Avenue",
+          "expect_category": "street_address",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "targeted me"
+      ]
+    },
+    {
+      "ResponseId": "G00055",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0018",
+      "UserLanguage": "EN-AU",
+      "QID41": "To be honest, My manager shouted at me in the break room.",
+      "QID42": "I just needed to put it somewhere.",
+      "stratum": "difficult_contextual",
+      "secrets": [],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00056",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0018",
+      "UserLanguage": "EN-AU",
+      "QID41": "same as last year Please do not share this with my team. I am a depot manager, Grade 3, 14 years of service, on the yard team of a team of 2. I have raised it twice now. My mobile is 029580 3838, though I cannot always answer. This is about Northline Services specifically.",
+      "QID42": "My passport number is W8824538 if that helps.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "phone",
+          "literal": "029580 3838",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "organisation",
+          "literal": "Northline Services",
+          "expect_category": "organisation_name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "passport",
+          "literal": "W8824538",
+          "expect_category": "passport",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "same as"
+      ]
+    },
+    {
+      "ResponseId": "G00057",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "hazard",
+      "household_id": "HH0019",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. I probably should not have said this, but the workload has doubled since the restructure. I was put on hold for an hour and then cut off. Email me at aoife.nakamura@group.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "aoife.nakamura@group.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the workload",
+        "I was"
+      ]
+    },
+    {
+      "ResponseId": "G00058",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0019",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager targeted me in meetings until I cried. It has been going on for months.",
+      "QID42": "BSB 194915 if you need to run a report. This is about Northline Services specifically. To put it plainly, the only one here who des the handover.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "bsb",
+          "literal": "194915",
+          "expect_category": "bsb",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "organisation",
+          "literal": "Northline Services",
+          "expect_category": "organisation_name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "implication_person",
+          "literal": "the only one here who des the handover",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "misspelled",
+          "mandatory": false
+        }
+      ],
+      "must_survive": [
+        "targeted me"
+      ]
+    },
+    {
+      "ResponseId": "G00059",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0019",
+      "UserLanguage": "EN-AU",
+      "respondent_name": "Hassan Kowalski",
+      "household_members": "Hassan Kowalski; Fiona Kowalski",
+      "QID41": "To be honest, my team has always had my back. everything has been paid on time for two years.",
+      "QID42": "This is anonymous but the detail is real. Nobody has done anything about it. My partner Fiona Kowalski and I (Hassan Kowalski) both experienced this.",
+      "stratum": "household_grid",
+      "secrets": [
+        {
+          "kind": "cross_field_person",
+          "literal": "Fiona Kowalski",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "cross_field_person",
+          "literal": "Hassan Kowalski",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "my team",
+        "everything has"
+      ]
+    },
+    {
+      "ResponseId": "G00060",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "hazard",
+      "household_id": "HH0020",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. I have been off sick twice this quarter and neither was discussed. the pre-approval took four months and was never needed. Email me at tomas.nakamura@connect.net.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "tomas.nakamura@connect.net.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "I have",
+        "the pre-approval"
+      ]
+    },
+    {
+      "ResponseId": "G00061",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "service",
+      "household_id": "HH0020",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. Long story short, Cover wise, the claim was paid without argument. I am not the only one who feels this way. I am done pretending it is fine. Email me at grace.whitlam@corp.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "grace.whitlam@corp.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "the claim"
+      ]
+    },
+    {
+      "ResponseId": "G00062",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0020",
+      "UserLanguage": "EN-AU",
+      "QID41": "To be honest, same as last year I am a labourer, Step 3, 3 years of service, on the yard team of a team of 3.",
+      "QID42": "Nobody has done anything about it.",
+      "stratum": "difficult_contextual",
+      "secrets": [],
+      "must_survive": [
+        "same as"
+      ]
+    },
+    {
+      "ResponseId": "G00063",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0021",
+      "UserLanguage": "EN-AU",
+      "respondent_name": "Tomas Mbeki",
+      "household_members": "Tomas Mbeki; Priya Mbeki",
+      "QID41": "For what it is worth, My manager excluded me from the roster after I complained.",
+      "QID42": "Please do not share this with my team. I have raised it twice now. My partner Priya Mbeki and I (Tomas Mbeki) both experienced this.",
+      "stratum": "household_grid",
+      "secrets": [
+        {
+          "kind": "cross_field_person",
+          "literal": "Priya Mbeki",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "cross_field_person",
+          "literal": "Tomas Mbeki",
+          "expect_category": "name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "excluded me"
+      ]
+    },
+    {
+      "ResponseId": "G00064",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0021",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager shouted at me in the break room. Please do not share this with my team. I work at Corvus Group as a warden.",
+      "QID42": "I have raised it twice now. Email me at ahmed.sinclair@mail.com.au if you need more detail. My passport number is Y1645639 if that helps. Driver licence: 29747501.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "ahmed.sinclair@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "passport",
+          "literal": "Y1645639",
+          "expect_category": "passport",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "29747501",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00065",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0021",
+      "UserLanguage": "EN-AU",
+      "QID41": "I have been struggling since this started and it has left me with anxiety.",
+      "QID42": "I have raised it twice now.",
+      "stratum": "structured",
+      "secrets": [],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00066",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0022",
+      "UserLanguage": "EN-AU",
+      "QID41": "I probably should not have said this, but My manager constantly undermined in front of the team.",
+      "QID42": "I am a registered nurse, Level 4, 18 years of service, on the yard team of a team of 2. Nobody has done anything about it.",
+      "stratum": "difficult_contextual",
+      "secrets": [],
+      "must_survive": [
+        "constantly undermined"
+      ]
+    },
+    {
+      "ResponseId": "G00067",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0022",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.65,
+      "QID41": "I probably should not have said this, but I have been struggling since this started and it has left me with a shoulder injury.",
+      "QID42": "TFN: 359 627 I69.",
+      "stratum": "handwriting_scan",
+      "secrets": [
+        {
+          "kind": "ocr_tfn",
+          "literal": "359 627 I69",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "ocr_corrupted",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00068",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0022",
+      "UserLanguage": "EN-AU",
+      "QID41": "Long story short, My manager excluded me from the roster after I complained.",
+      "QID42": "This is anonymous but the detail is real. I am a program manager, EL6, in the regional office, with 16 years of service. I have raised it twice now. My mobile is 029341 6484, though I cannot always answer. I am based in Hobart these days. I am EL1 and that makes me one of very few.",
+      "stratum": "adversarial",
+      "secrets": [
+        {
+          "kind": "phone",
+          "literal": "029341 6484",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "suburb",
+          "literal": "Hobart",
+          "expect_category": "location",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "aps_level",
+          "literal": "EL1",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "excluded me"
+      ]
+    },
+    {
+      "ResponseId": "G00069",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0023",
+      "UserLanguage": "EN-AU",
+      "QID41": "I feel safe raising concerns here.",
+      "QID42": "the referral was approved the same day. Please do not share this with my team. I work at Acme Pty Ltd as a barista. I am done pretending it is fine. The employer ACN is 230 644 443 if that is useful. Pay me on 4111 3250 4410 6571 if it is easier. My passport number is A8498540 if that helps.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "acn",
+          "literal": "230 644 443",
+          "expect_category": "acn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "credit_card",
+          "literal": "4111 3250 4410 6571",
+          "expect_category": "credit_card",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "passport",
+          "literal": "A8498540",
+          "expect_category": "passport",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "I feel",
+        "the referral"
+      ]
+    },
+    {
+      "ResponseId": "G00070",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0023",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager shouted at me in the break room. I am not the only one who feels this way.",
+      "QID42": "Nobody has done anything about it. My TFN is 573 244 723 if you need to look me up. Realistically I am the only casual on the roster. Best number is ０８９２８４ ４４２１.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "tfn",
+          "literal": "573 244 723",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "implication_person",
+          "literal": "the only casual on the roster",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "leet",
+          "mandatory": false
+        },
+        {
+          "kind": "phone_obfuscated",
+          "literal": "０８９２８４ ４４２１",
+          "expect_category": "phone",
+          "checksummed": false,
+          "degradation": "fullwidth",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "shouted at"
+      ]
+    },
+    {
+      "ResponseId": "G00071",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0023",
+      "UserLanguage": "EN-AU",
+      "QID41": "For what it is worth, fine i guess Nobody has done anything about it. The employer ACN is 635 199 441 if that is useful. For context I work at Acme Pty Ltd.",
+      "QID42": "I work as a mine supervisor.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "acn",
+          "literal": "635 199 441",
+          "expect_category": "acn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "organisation",
+          "literal": "Acme Pty Ltd",
+          "expect_category": "organisation_name",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "public_role",
+          "literal": "mine supervisor",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "fine i"
+      ]
+    },
+    {
+      "ResponseId": "G00072",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "service",
+      "household_id": "HH0024",
+      "UserLanguage": "EN-AU",
+      "QID41": "Cover wise, three months and still chasing a claim of four hundred dollars. I am a shift supervisor, Band 6, 20 years of service, on the ward team of a team of 10.",
+      "QID42": "It has been going on for months. I am EL1 and that makes me one of very few. I am based in our depot. Driver licence: 10106109.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "aps_level",
+          "literal": "EL1",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "workplace_type",
+          "literal": "our depot",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "drivers_licence",
+          "literal": "10106109",
+          "expect_category": "drivers_licence",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "three months"
+      ]
+    },
+    {
+      "ResponseId": "G00073",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0024",
+      "UserLanguage": "EN-AU",
+      "QID41": "My manager humiliated me in front of the new starters. I am a shift supervisor, Class 2, 22 years of service, on the yard team of a team of 13. I have raised it twice now. My title is compliance officer.",
+      "QID42": "My CRN is 549 914 217T from an old claim. The enrolment reference is 5 2596 6283 4.",
+      "stratum": "adversarial",
+      "secrets": [
+        {
+          "kind": "public_role",
+          "literal": "compliance officer",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "centrelink_crn",
+          "literal": "549 914 217T",
+          "expect_category": "centrelink_crn",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "medicare_enrolment",
+          "literal": "5 2596 6283 4",
+          "expect_category": "medicare_enrolment",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "humiliated me"
+      ]
+    },
+    {
+      "ResponseId": "G00074",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "positive",
+      "household_id": "HH0024",
+      "UserLanguage": "EN-AU",
+      "QID41": "For what it is worth, my team has always had my back. telehealth saved me a two hour drive each way. Please do not share this with my team.",
+      "QID42": "I am a economist, SES, in the digital services branch, with 12 years of service. I have raised it twice now. The employer ACN is 452 722 440 if that is useful. My CRN is 558 687 578J from an old claim. The enrolment reference is 3 1612 1645 7.",
+      "stratum": "difficult_contextual",
+      "secrets": [
+        {
+          "kind": "acn",
+          "literal": "452 722 440",
+          "expect_category": "acn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "centrelink_crn",
+          "literal": "558 687 578J",
+          "expect_category": "centrelink_crn",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "medicare_enrolment",
+          "literal": "3 1612 1645 7",
+          "expect_category": "medicare_enrolment",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "my team",
+        "telehealth saved"
+      ]
+    },
+    {
+      "ResponseId": "G00075",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0025",
+      "UserLanguage": "EN-AU",
+      "QID41": "fine i guess I do not want my employer to find out I said this.",
+      "QID42": "I work at Northline Services as a barista. Email me at ahmed.nakamura@group.net.au if you need more detail. My TFN is 957 139 001 if you need to look me up. Pay me on 555534 6559 6398 1972 if it is easier.",
+      "stratum": "short_open_text",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "ahmed.nakamura@group.net.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "tfn",
+          "literal": "957 139 001",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "credit_card",
+          "literal": "555534 6559 6398 1972",
+          "expect_category": "credit_card",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "fine i"
+      ]
+    },
+    {
+      "ResponseId": "G00076",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "health",
+      "household_id": "HH0025",
+      "UserLanguage": "EN-AU",
+      "QID41": "To be honest, I have been struggling since this started and it has left me with a shoulder injury. I am a shift supervisor, Grade 4, 2 years of service, on the roster of a team of 2. I have raised it twice now. BSB 304169 if you need to run a report.",
+      "QID42": "Realistically I am the only woman on the night shift. My CRN is 954 110 431C from an old claim.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "bsb",
+          "literal": "304169",
+          "expect_category": "bsb",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "implication_person",
+          "literal": "the only woman on the night shift",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "leet",
+          "mandatory": false
+        },
+        {
+          "kind": "centrelink_crn",
+          "literal": "954 110 431C",
+          "expect_category": "centrelink_crn",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": []
+    },
+    {
+      "ResponseId": "G00077",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "harm",
+      "household_id": "HH0025",
+      "UserLanguage": "EN-AU",
+      "QID41": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster.",
+      "QID42": "The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. The workload expectations across the quarter were discussed at length during the general staff forum, and many colleagues noted that standard operating procedures had been updated several times without adequate training time allocated on the roster. For what it is worth, My manager targeted me in meetings until I cried. Nobody has done anything about it. Email me at grace.nguyen@mail.com.au if you need more detail.",
+      "stratum": "long_narrative",
+      "secrets": [
+        {
+          "kind": "email",
+          "literal": "grace.nguyen@mail.com.au",
+          "expect_category": "email",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "targeted me"
+      ]
+    },
+    {
+      "ResponseId": "G00078",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "terse",
+      "household_id": "HH0026",
+      "UserLanguage": "EN-AU",
+      "QID41": "I probably should not have said this, but no complaints Please do not share this with my team. I have raised it twice now.",
+      "QID42": "My TFN is 823 411 942 if you need to look me up. My title is contact centre agent. The gateway logs show 2001:0db8:9c7c:5a2d:70d8:3b61:13e8:f2ce for my session.",
+      "stratum": "structured",
+      "secrets": [
+        {
+          "kind": "tfn",
+          "literal": "823 411 942",
+          "expect_category": "tfn",
+          "checksummed": true,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "public_role",
+          "literal": "contact centre agent",
+          "expect_category": "implication",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        },
+        {
+          "kind": "ipv6",
+          "literal": "2001:0db8:9c7c:5a2d:70d8:3b61:13e8:f2ce",
+          "expect_category": "ipv6",
+          "checksummed": false,
+          "degradation": "clean",
+          "mandatory": true
+        }
+      ],
+      "must_survive": [
+        "no complaints"
+      ]
+    },
+    {
+      "ResponseId": "G00079",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "template": "hazard",
+      "household_id": "HH0026",
+      "UserLanguage": "EN-AU",
+      "QID41": "I probably should not have said this, but working from home means nobody sees how bad it has got.",
+      "QID42": "I was put on hold for an hour and then cut off. I do not want my employer to find out I said this. I have raised it twice now.",
+      "stratum": "short_open_text",
+      "secrets": [],
+      "must_survive": [
+        "working from",
+        "I was"
+      ]
+    }
+  ],
+  "qualtrics": {
+    "survey_id": "SV_syntheticStratifiedBenchmark",
+    "name": "Synthetic Stratified Government Survey Benchmark",
+    "metadata_columns": [
+      "StartDate",
+      "EndDate",
+      "Status",
+      "IPAddress",
+      "Progress",
+      "Duration (in seconds)",
+      "Finished",
+      "RecordedDate",
+      "ResponseId",
+      "RecipientLastName",
+      "RecipientFirstName",
+      "RecipientEmail",
+      "ExternalReference",
+      "LocationLatitude",
+      "LocationLongitude",
+      "DistributionChannel",
+      "UserLanguage"
+    ],
+    "embedded_fields": [
+      {
+        "name": "template",
+        "label": "Response template used by the generator",
+        "category": null,
+        "tokenise": false
+      },
+      {
+        "name": "household_id",
+        "label": "Household identifier used for split integrity",
+        "category": null,
+        "tokenise": false
+      },
+      {
+        "name": "ocr_confidence",
+        "label": "Simulated OCR capture confidence",
+        "category": null,
+        "tokenise": false
+      },
+      {
+        "name": "respondent_name",
+        "label": "Structured respondent name",
+        "category": "name",
+        "tokenise": false
+      },
+      {
+        "name": "household_members",
+        "label": "Structured household roster",
+        "category": "name",
+        "tokenise": false
+      },
+      {
+        "name": "street_address",
+        "label": "Structured street address",
+        "category": "street_address",
+        "tokenise": false
+      },
+      {
+        "name": "employer_name",
+        "label": "Structured employer name",
+        "category": "organisation_name",
+        "tokenise": false
+      },
+      {
+        "name": "respondent_email",
+        "label": "Structured respondent email",
+        "category": "email",
+        "tokenise": false
+      }
+    ],
+    "questions": [
+      {
+        "qid": "QID41",
+        "export_tag": "open_text_1",
+        "question_text": "Please describe your experience in your own words.",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      },
+      {
+        "qid": "QID42",
+        "export_tag": "open_text_2",
+        "question_text": "Is there anything else you would like to add?",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      }
+    ]
+  }
+}

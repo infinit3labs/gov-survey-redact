@@ -1,0 +1,3838 @@
+[
+  {
+    "ResponseId": "R_0100008748",
+    "secrets": [
+      {
+        "field": "QID22",
+        "kind": "bsb",
+        "literal": "625863",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID23",
+        "kind": "phone",
+        "literal": "0475 179 593",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "organisation",
+        "literal": "Northline Rehabilitation",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-155352",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Kiran Kowalski",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "marisol.nakamura@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0430 600 736",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My payments stopped without notice",
+      "She spoke to my employer",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100012BEC",
+    "secrets": [
+      {
+        "field": "QID23",
+        "kind": "employee_id",
+        "literal": "43901229",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Daniel Halvorsen",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "kiran.ferreira@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "039900 5364",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-912398",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Daniel Halvorsen",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "kiran.ferreira@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "039900 5364",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My case manager kept in",
+      "My employer ffered light duties"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_010002E475",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "address",
+        "literal": "16 Collins Road",
+        "expect_category": "street_address",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID22",
+        "kind": "email",
+        "literal": "tomas.nakamura@corp.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "bsb",
+        "literal": "742304",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Aoife Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "tomas.okafor@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "079943 6560",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-287265",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Aoife Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "tomas.okafor@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "079943 6560",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My employer offered light duties",
+      "Thank you to the staff"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_010003ABB2",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-348342",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Daniel Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "lena.ferreira@corp.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My payments stopped without notice",
+      "He never returned my calls"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010004507F",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-946642",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Kiran Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "aoife.ferreira@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0454 917 772",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The online form was easy",
+      "She rang my employer to",
+      "The medical certificates were hard"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010005E0F5",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "phone",
+        "literal": "079423 6607",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID22",
+        "kind": "employee_id",
+        "literal": "85343157",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "employee_id",
+        "literal": "85343157",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-783264",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Marisol Ferreira",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "lena.okafor@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My case manager kept in"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_01000684F0",
+    "secrets": [
+      {
+        "field": "QID22",
+        "kind": "tfn",
+        "literal": "472 778 783",
+        "expect_category": "tfn",
+        "checksummed": true,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-909070",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Grace Kowalski",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "kiran.mbeki@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0428 434 587",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The case manager did the",
+      "I came back on reduced",
+      "i would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100075B5F",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "bsb",
+        "literal": "168389",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID23",
+        "kind": "organisation",
+        "literal": "Corvus Group",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID23",
+        "kind": "site",
+        "literal": "Newcastle terminal",
+        "expect_category": "implication",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Grace Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "ahmed.nakamura@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "029218 3778",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-605434",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Grace Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "ahmed.nakamura@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "029218 3778",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "He always returned my calls",
+      "My employer offered light duties",
+      "thank you to the staff"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_010008CEF9",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-384571",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Lena Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "grace.whitlam@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "Communication was clear throughout and",
+      "My employer offered light duties"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100094EED",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-868878",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Marisol Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "jane.mbeki@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0471 826 704",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "Communication was clear throughout and",
+      "She rang my employer to",
+      "My employer offered light duties",
+      "Please make it easier for"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010010CD66",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Jane Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID23",
+        "kind": "employee_id",
+        "literal": "66953929",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "person_name",
+        "literal": "Dr Grace Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID24",
+        "kind": "organisation",
+        "literal": "Kwinana Health Hub",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-562649",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Kiran Kowalski",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "fiona.nakamura@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "079421 5266",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My case manager changed four",
+      "My supervisor made it clear",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100115914",
+    "secrets": [
+      {
+        "field": "QID22",
+        "kind": "bsb",
+        "literal": "303332",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "bsb",
+        "literal": "303332",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-632870",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Fiona Sinclair",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "priya.mbeki@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "039645 6866",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The decision letter did not",
+      "Thank you to the staff"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010012A8EA",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Grace Sinclair",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID23",
+        "kind": "person_name",
+        "literal": "Dr Jane Nakamura",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID23",
+        "kind": "organisation",
+        "literal": "Bendigo Community Clinic",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Lena Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "ahmed.okafor@mail.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-820181",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Lena Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "ahmed.okafor@mail.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The occupational therapist visited my",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27"
+    ]
+  },
+  {
+    "ResponseId": "R_010013650D",
+    "secrets": [
+      {
+        "field": "QID22",
+        "kind": "organisation",
+        "literal": "Corvus Injury Management",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID23",
+        "kind": "organisation",
+        "literal": "Corvus Injury Management",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-457922",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Kiran Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "grace.abadi@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0470 976 433",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My case manager changed four",
+      "Please make it easier for"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_01001437AA",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "email",
+        "literal": "h a s s a n . s i n c l a i r @ m a i l . n e t . a u",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID22",
+        "kind": "employee_id",
+        "literal": "40444554",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-889816",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Ahmed Halvorsen",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "daniel.whitlam@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0421 170 347",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "I felt like the system",
+      "when i came back there"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010015E75A",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Fiona Nakamura",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID22",
+        "kind": "person_name",
+        "literal": "Daniel Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID22",
+        "kind": "organisation",
+        "literal": "Acme Pty Ltd",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-489104",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Hassan Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "fiona.petrov@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "the medical certificates were hard"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010016721B",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "email",
+        "literal": "a o i f e . p e t r o v @ g r o u p . c o m . a u",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID22",
+        "kind": "bsb",
+        "literal": "162395",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID23",
+        "kind": "email",
+        "literal": "aoife.nguyen@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-603602",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Hassan Petrov",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "marisol.nguyen@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "039163 2082",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My payments stopped without notice",
+      "He never returned my calls",
+      "my supervisor made it clear",
+      "Please make it easier for"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100179401",
+    "secrets": [
+      {
+        "field": "QID24",
+        "kind": "employee_id",
+        "literal": "20154810",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-583889",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Lena Kowalski",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "tomas.kowalski@mail.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0445 315 746",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My employer offered light duties"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010018D55E",
+    "secrets": [
+      {
+        "field": "QID23",
+        "kind": "person_name",
+        "literal": "Dr Fiona Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID23",
+        "kind": "organisation",
+        "literal": "Fremantle Occupational Health",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "phone",
+        "literal": "079526 9687",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-752499",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Tomas Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "lena.brennan@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0418 771 188",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "I felt like the system",
+      "My case manager changed four"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010019A884",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-342895",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Jane Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "kiran.nguyen@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "089341 1220",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The decision letter did not",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010020E13C",
+    "secrets": [
+      {
+        "field": "QID23",
+        "kind": "organisation",
+        "literal": "Halden Holdings",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID23",
+        "kind": "site",
+        "literal": "Sunshine warehouse",
+        "expect_category": "implication",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID24",
+        "kind": "employee_id",
+        "literal": "66122412",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Ahmed Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "kiran.petrov@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "0411 998 445",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-880064",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Ahmed Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "kiran.petrov@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0411 998 445",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The return-to-work plan was agreed"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_01002122AA",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-520663",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Priya Halvorsen",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "jane.abadi@group.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "039706 1102",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The medical certificates were hard"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100226490",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Tomas Kowalski",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID22",
+        "kind": "person_name",
+        "literal": "Priya Nguyen",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID24",
+        "kind": "employee_id",
+        "literal": "42854282",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-771311",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Lena Kowalski",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "kiran.ferreira@group.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0436 757 153",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The online form was easy",
+      "Thank yout o the staff"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100234B0E",
+    "secrets": [
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Marisol Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "marisol.whitlam@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-675228",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Marisol Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "marisol.whitlam@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The claim was approved quickly"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27"
+    ]
+  },
+  {
+    "ResponseId": "R_010024A04F",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "organisation",
+        "literal": "Northline Services",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID21",
+        "kind": "site",
+        "literal": "Cairns branch",
+        "expect_category": "implication",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID23",
+        "kind": "phone",
+        "literal": "0441 959 774",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "bsb",
+        "literal": "787048",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Tomas Sinclair",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "tomas.whitlam@connect.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "0495 419 116",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-323900",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Tomas Sinclair",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "tomas.whitlam@connect.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0495 419 116",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My rehabilitation provider was thorough",
+      "My case manager kept in",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_010025F850",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-320350",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Jane Halvorsen",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "daniel.mbeki@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "089635 1121",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The decision letter did not",
+      "He never returned my calls",
+      "Thank you to the staff"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100267909",
+    "secrets": [
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Hassan Brennan",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "tomas.kowalski@corp.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "089107 3837",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-358479",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Hassan Brennan",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "tomas.kowalski@corp.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "089107 3837",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "Communication was clear throughout and",
+      "My case manager kept in",
+      "My employer offered light duties"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_0100275947",
+    "secrets": [
+      {
+        "field": "QID22",
+        "kind": "organisation",
+        "literal": "Pinnacle Recovery Services",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "bsb",
+        "literal": "931219",
+        "expect_category": "bsb",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Lena Ferreira",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "daniel.kowalski@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "079280 7269",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-414619",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Lena Ferreira",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "daniel.kowalski@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "079280 7269",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The claim was approved quickly",
+      "The return-to-work plan was agreed"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_010028165C",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "address",
+        "literal": "76 Elizabeth Street",
+        "expect_category": "street_address",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-610736",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Marisol Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "daniel.halvorsen@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0472 228 435",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My supervisor made it clear"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_01002976F2",
+    "secrets": [
+      {
+        "field": "QID23",
+        "kind": "organisation",
+        "literal": "Corvus Injury Management",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Jane Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "lena.abadi@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-412339",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Jane Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "lena.abadi@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "He always returned my calls"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27"
+    ]
+  },
+  {
+    "ResponseId": "R_010030E00F",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "claim_reference",
+        "literal": "WC-2026-858535",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID23",
+        "kind": "person_name",
+        "literal": "Grace Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID24",
+        "kind": "person_name",
+        "literal": "Grace Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-489668",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Jane Okafor",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "priya.petrov@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "079395 1694",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "He always returned my calls",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100314554",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Fiona Ferreira",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID24",
+        "kind": "organisation",
+        "literal": "Pinnacle Recovery Services",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-707383",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Grace Brennan",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "lena.whitlam@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0423 588 161",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "He always returned my calls",
+      "The return-to-work plan was agreed"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100323E7B",
+    "secrets": [],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-482784",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Hassan Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "hassan.nguyen@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "029732 8402",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "i felt like the system",
+      "My case manager changed four",
+      "The rehabilitation provider cancelled appointments"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100332BEE",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Marisol Ferreira",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID21",
+        "kind": "organisation",
+        "literal": "Acme Pty Ltd",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Kiran Brennan",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "tomas.whitlam@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "0484 455 561",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-889030",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Kiran Brennan",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "tomas.whitlam@mail.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0484 455 561",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "He always returned my calls",
+      "The medical certificates were hard"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_0100342645",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "organisation",
+        "literal": "Acme Pty Ltd",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID21",
+        "kind": "site",
+        "literal": "Box Hill store",
+        "expect_category": "implication",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID22",
+        "kind": "phone",
+        "literal": "0422 477 335",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "claim_reference",
+        "literal": "WC-2026-297269",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID26",
+        "kind": "contact_name",
+        "literal": "Fiona Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID27",
+        "kind": "contact_email",
+        "literal": "kiran.mbeki@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID28",
+        "kind": "contact_phone",
+        "literal": "029583 7620",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-444688",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Fiona Mbeki",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "kiran.mbeki@group.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "029583 7620",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "Communication was clear throughout and",
+      "He always returned my calls",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24",
+      "QID26",
+      "QID27",
+      "QID28"
+    ]
+  },
+  {
+    "ResponseId": "R_01003546F2",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Priya Ferreira",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID23",
+        "kind": "person_name",
+        "literal": "Lena Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID23",
+        "kind": "organisation",
+        "literal": "Acme Pty Ltd",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "employee_id",
+        "literal": "54685768",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-310115",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Priya Whitlam",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "marisol.brennan@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0413 659 970",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "The occupational therapist visited my",
+      "The medical certificates were hard"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100369157",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "claim_reference",
+        "literal": "WC-2026-530026",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "organisation",
+        "literal": "Corvus Injury Management",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-490604",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Jane Brennan",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "priya.nguyen@connect.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My employer offered light duties",
+      "Please make it easier for"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_010037BD69",
+    "secrets": [
+      {
+        "field": "QID23",
+        "kind": "person_name",
+        "literal": "Fiona Petrov",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID24",
+        "kind": "person_name",
+        "literal": "Fiona Nakamura",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-917139",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Hassan Sinclair",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "fiona.petrov@mail.net.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "029363 3232",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "Communication was clear throughout and",
+      "She rang my employer to",
+      "The occupational therapist visited my"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_01003866CE",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "phone",
+        "literal": "０４９０ ８７７ ４５０",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-605360",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Lena Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "priya.nguyen@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "He never returned my calls",
+      "I would like someone independent"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  },
+  {
+    "ResponseId": "R_0100395CFE",
+    "secrets": [
+      {
+        "field": "QID21",
+        "kind": "person_name",
+        "literal": "Lena Nakamura",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID21",
+        "kind": "organisation",
+        "literal": "Acme Pty Ltd",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "QID24",
+        "kind": "person_name",
+        "literal": "Dr Daniel Halvorsen",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": false
+      },
+      {
+        "field": "QID24",
+        "kind": "organisation",
+        "literal": "Bendigo Community Clinic",
+        "expect_category": "organisation_name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "embedded_secrets": [
+      {
+        "field": "claim_number",
+        "kind": "claim_number",
+        "literal": "WC-2026-789258",
+        "expect_category": "reference_id",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_name",
+        "kind": "respondent_name",
+        "literal": "Daniel Abadi",
+        "expect_category": "name",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_email",
+        "kind": "respondent_email",
+        "literal": "kiran.ferreira@corp.com.au",
+        "expect_category": "email",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      },
+      {
+        "field": "respondent_phone",
+        "kind": "respondent_phone",
+        "literal": "0418 612 224",
+        "expect_category": "phone",
+        "checksummed": false,
+        "degradation": "clean",
+        "mandatory": true
+      }
+    ],
+    "must_survive": [
+      "My employer offered light duties"
+    ],
+    "answered_fields": [
+      "QID1",
+      "QID2",
+      "QID3",
+      "QID4",
+      "QID5",
+      "QID6",
+      "QID7",
+      "QID8",
+      "QID9",
+      "QID10",
+      "QID11",
+      "QID12",
+      "QID13",
+      "QID14",
+      "QID15",
+      "QID16",
+      "QID17",
+      "QID18",
+      "QID19",
+      "QID20",
+      "QID25",
+      "QID21",
+      "QID22",
+      "QID23",
+      "QID24"
+    ]
+  }
+]

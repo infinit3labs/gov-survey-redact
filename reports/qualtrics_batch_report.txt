@@ -1,0 +1,77 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ WHS CLAIMS EXPERIENCE · QUALTRICS BATCH SUBMISSION & REDACTION CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ instrument     WHS Claims Experience Survey 2026 (SV_whsClaimsExperience2026)
+ batches        6 × 40 responses · 240 total (26 partial) · seed 20261018
+ formats        api, ndjson, csv, tsv + ground truth sidecars · out: /Users/code/code/gov_survey_redaction/data/qualtrics_whs_batches
+ pipeline       survey profile · second pass on · schema-governed embedded data · IP metadata governed
+ runtime        3.2s total · 75.6 responses/s
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 1 · BATCH SUBMISSIONS — per-batch effectiveness
+──────────────────────────────────────────────────────────────────────────────
+┌───────┬──────┬──────┬────────┬─────────┬───────────┬────────┬──────┬──────┬──────┬────────┬───────┬─────────┐
+ batch │ resp │ part │ fields │  caught │ mandatory │  chars │ esc1 │ esc2 │ over │ review │ files │ ms/resp 
+├───────┼──────┼──────┼────────┼─────────┼───────────┼────────┼──────┼──────┼──────┼────────┼───────┼─────────┤
+     1 │   40 │    7 │    205 │ 103/103 │    100.0% │ 100.0% │    0 │    0 │    0 │    70% │     ✓ │   12.75 
+     2 │   40 │    5 │    193 │ 108/108 │    100.0% │ 100.0% │    0 │    0 │    0 │    75% │     ✓ │   12.40 
+     3 │   40 │    1 │    224 │ 140/140 │    100.0% │ 100.0% │    0 │    0 │    0 │    82% │     ✓ │   13.03 
+     4 │   40 │    3 │    208 │ 126/126 │    100.0% │ 100.0% │    0 │    0 │    0 │    80% │     ✓ │   13.45 
+     5 │   40 │    6 │    210 │ 133/133 │    100.0% │ 100.0% │    0 │    0 │    0 │    80% │     ✓ │   13.27 
+     6 │   40 │    4 │    210 │ 129/129 │    100.0% │ 100.0% │    0 │    0 │    0 │    80% │     ✓ │   13.88 
+     Σ │  240 │   26 │   1250 │ 739/739 │    100.0% │ 100.0% │    0 │    0 │    0 │    78% │     ✓ │   13.13 
+└───────┴──────┴──────┴────────┴─────────┴───────────┴────────┴──────┴──────┴──────┴────────┴───────┴─────────┘
+  esc1 = responses with a missed mandatory identifier on pass 1 · esc2 = still missing after second pass · files = round-trip check
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 2 · ACCEPTANCE GATES — cumulative across all batches
+──────────────────────────────────────────────────────────────────────────────
+  PASS  mandatory identifier recall              1.0000   (target ≥ 0.995)
+  PASS  response escape rate                     0.0000   (target ≤ 0.015)
+  PASS  over-redaction rate                      0.0000   (target ≤ 0.005)
+  PASS  post-review escape rate                  0.0000   (target ≤ 0.015)
+
+  VERDICT: PASS — batches are safe to release after the standard review flow
+  embedded claims data governed: 903/903   · IP metadata masked: 240/240   · idempotence failures: 0   · round-trip failures: 0
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 3 · PER-CLASS IDENTIFIER RECALL (all batches)
+──────────────────────────────────────────────────────────────────────────────
+    address                ██████████████████████████ 100.0%  n=19
+    bsb                    ██████████████████████████ 100.0%  n=27
+    claim_reference        ██████████████████████████ 100.0%  n=30
+    contact_email          ██████████████████████████ 100.0%  n=106
+    contact_name           ██████████████████████████ 100.0%  n=106
+    contact_phone          ██████████████████████████ 100.0%  n=78
+    email                  ██████████████████████████ 100.0%  n=34
+    employee_id            ██████████████████████████ 100.0%  n=35
+    organisation           ██████████████████████████ 100.0%  n=119
+    person_name            ██████████████████████████ 100.0%  n=117
+    phone                  ██████████████████████████ 100.0%  n=36
+    site                   ██████████████████████████ 100.0%  n=29
+    tfn                    ██████████████████████████ 100.0%  n=3
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 4 · ARTIFACTS
+──────────────────────────────────────────────────────────────────────────────
+    30 response files + sidecars written under /Users/code/code/gov_survey_redaction/data/qualtrics_whs_batches
+      batch_01.api.json
+      batch_01.ndjson
+      batch_01.responses.csv
+      batch_01.responses.tsv
+      batch_01.ground_truth.json
+      batch_02.api.json
+      batch_02.ndjson
+      batch_02.responses.csv
+      batch_02.responses.tsv
+      batch_02.ground_truth.json
+      …
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 5 · NOTES
+──────────────────────────────────────────────────────────────────────────────
+    26 partial responses (abandoned mid-survey) exercised missing-answer handling end to end
+    review load is 78% of responses with the untrained gazetteer backend; trained encoders will lower confidence-driven routing
+    every batch file round-tripped through the Qualtrics readers
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

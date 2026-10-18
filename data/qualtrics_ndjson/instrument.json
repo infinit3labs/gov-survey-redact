@@ -1,0 +1,845 @@
+{
+  "survey_id": "SV_whsClaimsExperience2026",
+  "name": "WHS Claims Experience Survey 2026",
+  "metadata_columns": [
+    "StartDate",
+    "EndDate",
+    "Status",
+    "IPAddress",
+    "Progress",
+    "Duration (in seconds)",
+    "Finished",
+    "RecordedDate",
+    "ResponseId",
+    "RecipientLastName",
+    "RecipientFirstName",
+    "RecipientEmail",
+    "ExternalReference",
+    "LocationLatitude",
+    "LocationLongitude",
+    "DistributionChannel",
+    "UserLanguage"
+  ],
+  "embedded_fields": [
+    {
+      "name": "claim_number",
+      "label": "Claims system claim reference",
+      "category": "reference_id",
+      "tokenise": true
+    },
+    {
+      "name": "respondent_name",
+      "label": "Sampled respondent name",
+      "category": "name",
+      "tokenise": false
+    },
+    {
+      "name": "respondent_email",
+      "label": "Sampled respondent email",
+      "category": "email",
+      "tokenise": false
+    },
+    {
+      "name": "respondent_phone",
+      "label": "Sampled respondent phone",
+      "category": "phone",
+      "tokenise": false
+    },
+    {
+      "name": "employer_name",
+      "label": "Employer on the claim",
+      "category": "organisation_name",
+      "tokenise": false
+    }
+  ],
+  "questions": [
+    {
+      "qid": "QID1",
+      "export_tag": "claim_lodgement",
+      "question_text": "How did you lodge your workers' compensation claim?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Online",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "By phone",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Through my employer",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Through my union",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Other",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID2",
+      "export_tag": "time_to_first_contact",
+      "question_text": "How long after you lodged your claim did the insurer first contact you?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Within 2 business days",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "3 to 7 business days",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "1 to 2 weeks",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "More than 2 weeks",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "I was never contacted",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID3",
+      "export_tag": "process_open_honest",
+      "question_text": "The claims process was open and honest.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID4",
+      "export_tag": "good_communication",
+      "question_text": "There was good communication between the people and organisations involved in my claim.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID5",
+      "export_tag": "protecting_interests",
+      "question_text": "I felt like the system was working to protect my best interests.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID6",
+      "export_tag": "treated_fairly",
+      "question_text": "I believe the system treated me fairly.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID7",
+      "export_tag": "helped_recovery",
+      "question_text": "I feel that the system helped me with my recovery.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID8",
+      "export_tag": "case_manager_respect",
+      "question_text": "My case manager treated me with respect and sensitivity.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID9",
+      "export_tag": "case_manager_contact",
+      "question_text": "How often did your case manager keep you informed about your claim?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "At least weekly",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Every 2 to 3 weeks",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Monthly",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Less often",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "I was not kept informed",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID10",
+      "export_tag": "rtw_plan_discussed",
+      "question_text": "Was a return-to-work plan discussed with you?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Yes",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "No",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "I'm not sure",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "It had not been developed before I returned",
+          "recode": 4,
+          "choice_id": 4
+        }
+      ]
+    },
+    {
+      "qid": "QID11",
+      "export_tag": "suitable_duties",
+      "question_text": "Were suitable duties available when you were ready to return to work?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Yes",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "No",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Partly",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Not applicable - I have not returned to work",
+          "recode": 4,
+          "choice_id": 4
+        }
+      ]
+    },
+    {
+      "qid": "QID12",
+      "export_tag": "employer_contact",
+      "question_text": "Did your employer stay in contact with you while you were off work?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Yes, regularly",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Yes, occasionally",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "No",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "I am self-employed or no longer employed there",
+          "recode": 4,
+          "choice_id": 4
+        }
+      ]
+    },
+    {
+      "qid": "QID13",
+      "export_tag": "payment_timeliness",
+      "question_text": "Were your income support payments made on time?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Always",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Mostly",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Sometimes",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Rarely or never",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "I did not receive income support",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID14",
+      "export_tag": "compensation_adequacy",
+      "question_text": "The financial support I received was adequate for my needs.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID15",
+      "export_tag": "recovery_confidence",
+      "question_text": "I am confident about my recovery and return to work.",
+      "qtype": "Likert",
+      "selector": "",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Strongly disagree",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Disagree",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Neither agree nor disagree",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Agree",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Strongly agree",
+          "recode": 5,
+          "choice_id": 5
+        }
+      ]
+    },
+    {
+      "qid": "QID16",
+      "export_tag": "injury_type",
+      "question_text": "What kind of condition is your claim for?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Musculoskeletal condition",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Fracture",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Mental health condition",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Neurological injury or disease",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "Other traumatic injury",
+          "recode": 5,
+          "choice_id": 5
+        },
+        {
+          "text": "Other disease",
+          "recode": 6,
+          "choice_id": 6
+        }
+      ]
+    },
+    {
+      "qid": "QID17",
+      "export_tag": "jurisdiction",
+      "question_text": "Which workers' compensation scheme is your claim with?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Queensland",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "New South Wales",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Victoria",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Western Australia",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "South Australia",
+          "recode": 5,
+          "choice_id": 5
+        },
+        {
+          "text": "Tasmania",
+          "recode": 6,
+          "choice_id": 6
+        },
+        {
+          "text": "Northern Territory",
+          "recode": 7,
+          "choice_id": 7
+        },
+        {
+          "text": "ACT",
+          "recode": 8,
+          "choice_id": 8
+        },
+        {
+          "text": "Comcare",
+          "recode": 9,
+          "choice_id": 9
+        },
+        {
+          "text": "Seacare",
+          "recode": 10,
+          "choice_id": 10
+        }
+      ]
+    },
+    {
+      "qid": "QID18",
+      "export_tag": "time_to_lodge",
+      "question_text": "How long after your injury or illness did you lodge your claim?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Less than 7 days",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "7 to 13 days",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "14 to 27 days",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "28 to 55 days",
+          "recode": 4,
+          "choice_id": 4
+        },
+        {
+          "text": "56 to 83 days",
+          "recode": 5,
+          "choice_id": 5
+        },
+        {
+          "text": "84 to 180 days",
+          "recode": 6,
+          "choice_id": 6
+        },
+        {
+          "text": "More than 180 days",
+          "recode": 7,
+          "choice_id": 7
+        }
+      ]
+    },
+    {
+      "qid": "QID19",
+      "export_tag": "employer_type",
+      "question_text": "Which best describes your employer?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Premium-paying employer",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Self-insured employer",
+          "recode": 2,
+          "choice_id": 2
+        }
+      ]
+    },
+    {
+      "qid": "QID20",
+      "export_tag": "current_work_status",
+      "question_text": "Which best describes your situation now?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Working - same employer",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "Working - different employer",
+          "recode": 2,
+          "choice_id": 2
+        },
+        {
+          "text": "Not working",
+          "recode": 3,
+          "choice_id": 3
+        },
+        {
+          "text": "Retired",
+          "recode": 4,
+          "choice_id": 4
+        }
+      ]
+    },
+    {
+      "qid": "QID21",
+      "export_tag": "service_experience",
+      "question_text": "Thinking about your entire claims experience, what worked well and what could be improved?",
+      "qtype": "TE",
+      "selector": "",
+      "force_response": false,
+      "choices": []
+    },
+    {
+      "qid": "QID22",
+      "export_tag": "case_manager_experience",
+      "question_text": "Tell us about your experience with your case manager, including anything they did that helped or made things harder.",
+      "qtype": "TE",
+      "selector": "",
+      "force_response": false,
+      "choices": []
+    },
+    {
+      "qid": "QID23",
+      "export_tag": "rtw_experience",
+      "question_text": "What has helped, or gotten in the way of, your return to work?",
+      "qtype": "TE",
+      "selector": "",
+      "force_response": false,
+      "choices": []
+    },
+    {
+      "qid": "QID24",
+      "export_tag": "other_comments",
+      "question_text": "Is there anything else you would like us to know about your claim or your recovery?",
+      "qtype": "TE",
+      "selector": "",
+      "force_response": false,
+      "choices": []
+    },
+    {
+      "qid": "QID25",
+      "export_tag": "callback_contact",
+      "question_text": "May we contact you about your experience?",
+      "qtype": "MC",
+      "selector": "SAVR",
+      "force_response": false,
+      "choices": [
+        {
+          "text": "Yes",
+          "recode": 1,
+          "choice_id": 1
+        },
+        {
+          "text": "No",
+          "recode": 2,
+          "choice_id": 2
+        }
+      ]
+    },
+    {
+      "qid": "QID26",
+      "export_tag": "contact_name",
+      "question_text": "Thank you. What name should we use when we contact you?",
+      "qtype": "TE",
+      "selector": "",
+      "force_response": false,
+      "choices": []
+    },
+    {
+      "qid": "QID27",
+      "export_tag": "contact_email",
+      "question_text": "What is the best email address to reach you on?",
+      "qtype": "TE",
+      "selector": "",
+      "force_response": false,
+      "choices": []
+    },
+    {
+      "qid": "QID28",
+      "export_tag": "contact_phone",
+      "question_text": "What is the best phone number to reach you on?",
+      "qtype": "TE",
+      "selector": "",
+      "force_response": false,
+      "choices": []
+    }
+  ]
+}

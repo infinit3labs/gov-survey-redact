@@ -1,0 +1,557 @@
+{
+  "dataset_name": "aps_workplace_census_dirty",
+  "description": "Australian Public Service (APS) & State Government workplace survey responses with realistic free-text data quality issues: typos, transpositions, character-spaced emails, fullwidth digits, smart punctuation, zero-width spaces, all-caps rants, lowercase run-ons, public-sector implicating sequences, and protective/hard-negative controls.",
+  "schema_version": "1.0",
+  "lexicon_terms": [
+    {
+      "term": "Project Kestrel",
+      "category": "internal_term",
+      "aliases": [
+        "kestrel"
+      ],
+      "label": "internal project"
+    },
+    {
+      "term": "Beacon",
+      "category": "internal_term",
+      "aliases": [
+        "beacon rollout"
+      ],
+      "label": "internal program"
+    },
+    {
+      "term": "Aurion",
+      "category": "internal_term",
+      "aliases": [
+        "aurion hr"
+      ],
+      "label": "internal HR system"
+    }
+  ],
+  "records": [
+    {
+      "ResponseId": "R_aps0000",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes-not-employer",
+      "UserLanguage": "EN-AU",
+      "QID1": "Since the takc-over at the Parramatta warrehouse, the Kestral timsheet on our intrant has been broken and nobody told us why.",
+      "QID2": "I’m one of three EL2s in the Migration directorate and I’ve been here 18 years of service.",
+      "QID3": "Please don’t let my branch manager see this — I am worried about being identified.",
+      "data_quality_issues": [
+        "misspelled_internal_system (timsheet, intrant)",
+        "misspelled_project_lexicon (Kestral)",
+        "misspelled_site_noun (warrehouse, takc-over)",
+        "smart_apostrophes"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "Parramatta warrehouse",
+          "Kestral",
+          "timsheet",
+          "intrant",
+          "one of three EL2s in the Migration directorate",
+          "18 years"
+        ],
+        "must_appear": [
+          "nobody told us why",
+          "10-19 years"
+        ],
+        "expected_categories": [
+          "implication",
+          "internal_term",
+          "tenure"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0001",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes-anonymous",
+      "UserLanguage": "EN-AU",
+      "QID1": "no one answers the helpdesk so i had to type my address with spaces s a r a h . c h e n @ a g e n c y . g o v . a u so the filter wouldnt block it",
+      "QID2": "my mobile pasted from my phone is ０４１２ ３４５ ６７８ and i work as a policy adviser in the digital services branch",
+      "QID3": "there are two of us left in the integrity unit after the depot closure",
+      "data_quality_issues": [
+        "character_spaced_email",
+        "fullwidth_unicode_digits_phone",
+        "lowercase_unpunctuated_prose"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "s a r a h",
+          "０４１２",
+          "policy adviser",
+          "the digital services branch",
+          "there are two of us left in the integrity unit",
+          "after the depot closure"
+        ],
+        "must_appear": [
+          "no one answers"
+        ],
+        "expected_categories": [
+          "email",
+          "phone",
+          "implication"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0002",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "QID1": "My caseworker was Nguyễn Thị Hương and my manager Fiona ignored the safety breifing at the Box Hill storre.",
+      "QID2": "I hold a security clearance at the secret level and came through the 2021 intake.",
+      "QID3": "Last month we handled a machinery of government review and a freedom of information request.",
+      "data_quality_issues": [
+        "vietnamese_diacritics_third_party_name",
+        "misspelled_site_noun (storre)",
+        "unlabelled_copula_third_party"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "Nguyễn Thị Hương",
+          "my manager Fiona",
+          "breifing",
+          "Box Hill storre",
+          "security clearance at the secret level",
+          "the 2021 intake",
+          "machinery of government",
+          "freedom of information request"
+        ],
+        "must_appear": [
+          "ignored the safety"
+        ],
+        "expected_categories": [
+          "implication",
+          "internal_term"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0003",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "QID1": "DO NOT BUY WORKPLACE COVER FROM THESE PEOPLE. THE PORTAL FAILED ON RELEASE 2.4.0.1 AND V1.2.3.4.",
+      "QID2": "I am the only woman on the night shift and the youngest on the team here in a team of three.",
+      "QID3": "I am 45 years old, casual, and developed anxiety and chronic fatigue after the restructure.",
+      "data_quality_issues": [
+        "all_caps_rant",
+        "non_breaking_spaces",
+        "uniqueness_claims"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "the only woman on the night shift",
+          "the youngest on the team here",
+          "team of three",
+          "45 years old",
+          "anxiety",
+          "chronic fatigue"
+        ],
+        "must_appear": [
+          "DO NOT BUY WORKPLACE COVER FROM THESE PEOPLE",
+          "2.4.0.1",
+          "V1.2.3.4",
+          "2-5 people",
+          "45-54"
+        ],
+        "expected_categories": [
+          "implication",
+          "team_size",
+          "age",
+          "employment_status",
+          "health_detail"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0004",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "QID1": "I work at Department of Home Affairs and previously worked for Reticule Health under MA000098.",
+      "QID2": "Our site in Melbourne operates under the Occupational Health and Safety Act 2004 and WorkSafe Victoria audited us.",
+      "QID3": "My AGS number is 88412093 and I am an APS 6, in the complaints branch.",
+      "data_quality_issues": [
+        "employer_named_in_prose",
+        "modern_award_code",
+        "state_specific_whs_legislation"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "Department of Home Affairs",
+          "Reticule Health",
+          "MA000098",
+          "Occupational Health and Safety Act 2004",
+          "WorkSafe Victoria",
+          "88412093",
+          "APS 6",
+          "the complaints branch"
+        ],
+        "must_appear": [
+          "previously worked for"
+        ],
+        "expected_categories": [
+          "organisation_name",
+          "award",
+          "internal_term",
+          "reference_id",
+          "implication"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0005",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "no",
+      "UserLanguage": "EN-AU",
+      "QID1": "I am clear on what my responsibilities are and I have support to work safely.",
+      "QID2": "My team has always had my back and my supervisor listens and acts on it.",
+      "QID3": "The main branch closes early on Fridays, and we have support from the other team. Nothing has changed since the announcement.",
+      "data_quality_issues": [
+        "protective_validated_items_must_not_trigger_health_detector",
+        "generic_modifiers_must_not_trigger_unit_detector"
+      ],
+      "expectations": {
+        "must_not_appear": [],
+        "must_appear": [
+          "I am clear on what my responsibilities are",
+          "I have support to work safely",
+          "My team has always had my back",
+          "The main branch closes early on Fridays",
+          "the other team",
+          "since the announcement"
+        ],
+        "expected_categories": [],
+        "expected_review_state": "AUTO_ACCEPTED"
+      }
+    },
+    {
+      "ResponseId": "R_aps0006",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes-not-employer",
+      "UserLanguage": "EN-AU",
+      "QID1": "Line one: call my mobile 0412 345 678.\nLine two: the same mobile 0412 345 678 is best after 6pm.",
+      "QID2": "I’m one of three EL2s in the Migration directorate and I’ve been here 12 years of service.",
+      "QID3": "TFN: １２３ ４５６ ７８２ — I am worried about being identified.",
+      "data_quality_issues": [
+        "embedded_newlines",
+        "duplicate_identifier_mentions",
+        "fullwidth_labelled_tfn",
+        "smart_apostrophes",
+        "confidentiality_request"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "0412 345 678",
+          "one of three EL2s in the Migration directorate",
+          "12 years",
+          "１２３ ４５６ ７８２"
+        ],
+        "must_appear": [
+          "Line one",
+          "after 6pm",
+          "10-19 years"
+        ],
+        "expected_categories": [
+          "phone",
+          "implication",
+          "tenure",
+          "tfn"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0007",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "QID1": "Order 123 456 783 arrived and the invoice $1,250.00 is wrong for release 2.4.0.1.",
+      "QID2": "My worker number is 5300000100 and my review is due 12/03/2024.",
+      "QID3": "The main branch closes early on Fridays and the other team said nothing has changed.",
+      "data_quality_issues": [
+        "hard_negative_invalid_tfn",
+        "hard_negative_version_string",
+        "hard_negative_currency_amount",
+        "hard_negative_identifier_like_number",
+        "date_generalised_not_masked"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "12/03/2024"
+        ],
+        "must_appear": [
+          "123 456 783",
+          "$1,250.00",
+          "2.4.0.1",
+          "5300000100",
+          "2024",
+          "The main branch closes early on Fridays"
+        ],
+        "expected_categories": [
+          "date_au"
+        ],
+        "expected_review_state": "AUTO_ACCEPTED"
+      }
+    },
+    {
+      "ResponseId": "R_aps0008",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "QID1": "SEND THE FORMS TO 19 MACQUARIE PARADE, PARRAMATTA NSW 2150 OR PO BOX 412.",
+      "QID2": "THE OFFICE AT 45 COLLINS STREET, MELBOURNE VIC 3000 HAS NO PARKING.",
+      "QID3": "Nobody has replied to my email since the forms were sent.",
+      "data_quality_issues": [
+        "all_caps_address",
+        "po_box",
+        "state_postcode",
+        "comma_separated_address"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "19 MACQUARIE PARADE",
+          "NSW 2150",
+          "PO BOX 412",
+          "45 COLLINS STREET",
+          "VIC 3000"
+        ],
+        "must_appear": [
+          "SEND THE FORMS",
+          "NO PARKING",
+          "Nobody has replied"
+        ],
+        "expected_categories": [
+          "street_address",
+          "postcode"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0009",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "yes",
+      "UserLanguage": "VI",
+      "QID1": "Tôi làm việc tại Acme Pty Ltd và số điện thoại của tôi là 0412 345 678.",
+      "QID2": "Email của tôi là linh.nguyen@corp.com.au.",
+      "QID3": "Cảm ơn.",
+      "data_quality_issues": [
+        "non_english_language_field",
+        "vietnamese_diacritics",
+        "identifiers_inside_l2_text"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "0412 345 678",
+          "linh.nguyen@corp.com.au",
+          "Acme Pty Ltd"
+        ],
+        "must_appear": [
+          "Tôi làm việc tại"
+        ],
+        "expected_categories": [
+          "phone",
+          "email",
+          "organisation_name"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_aps0010",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "aps-census",
+      "Consent": "no",
+      "UserLanguage": "EN-AU",
+      "QID1": "",
+      "QID2": "   ",
+      "QID3": "No comment.",
+      "data_quality_issues": [
+        "empty_field",
+        "whitespace_only_field",
+        "single_short_answer"
+      ],
+      "expectations": {
+        "must_not_appear": [],
+        "must_appear": [
+          "No comment."
+        ],
+        "expected_categories": [],
+        "expected_review_state": "AUTO_ACCEPTED"
+      }
+    }
+  ],
+  "qualtrics": {
+    "survey_id": "SV_apsWorkplaceCensus2026",
+    "name": "APS Workplace Census 2026",
+    "metadata_columns": [
+      "StartDate",
+      "EndDate",
+      "Status",
+      "IPAddress",
+      "Progress",
+      "Duration (in seconds)",
+      "Finished",
+      "RecordedDate",
+      "ResponseId",
+      "RecipientLastName",
+      "RecipientFirstName",
+      "RecipientEmail",
+      "ExternalReference",
+      "LocationLatitude",
+      "LocationLongitude",
+      "DistributionChannel",
+      "UserLanguage"
+    ],
+    "embedded_fields": [
+      {
+        "name": "Instrument",
+        "label": "Survey instrument tag",
+        "category": null,
+        "tokenise": false
+      },
+      {
+        "name": "Consent",
+        "label": "Consent option selected on entry",
+        "category": null,
+        "tokenise": false
+      }
+    ],
+    "questions": [
+      {
+        "qid": "QID1",
+        "export_tag": "service_experience",
+        "question_text": "How would you describe your service delivery experience over the last 12 months?",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      },
+      {
+        "qid": "QID2",
+        "export_tag": "workplace_culture",
+        "question_text": "How would you describe the culture in your workplace?",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      },
+      {
+        "qid": "QID3",
+        "export_tag": "additional_comments",
+        "question_text": "Do you have any additional comments about your workplace?",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      }
+    ]
+  }
+}

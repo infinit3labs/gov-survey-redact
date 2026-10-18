@@ -1,0 +1,427 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ gov-survey-redact · SETTINGS MATRIX REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ datasets       APS census 11 · Citizen services 9 · Canonical 6 · Synthetic benchmark 80  (106 records)
+ configurations 288 runs · axes: nlp, overlap_mode, ocr_mode, generalise, review_threshold, style, second_pass · nlp-backend=gazetteer
+ environment    Python 3.12.10 · transformers/spaCy not installed — encoder backends fall back to the gazetteer
+ grading        leak/trace/over on final released text (2nd pass on queued records when enabled); review/category expectations on pass 1
+ runtime        408.4s total · 74.7 records/s · best score 91.0 (NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=on)
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 1 · LEADERBOARD — ranked by composite score
+──────────────────────────────────────────────────────────────────────────────
+top 10 of 288 runs
+┌────┬────────────────────────────────────────────────────────────────────────────────────────────────────┬──────┬───────┬──────┬────────┬────────┬───────┬──────┬────────┬───────┬────────────┐
+  # │ configuration                                                                                      │ leak │ trace │ over │ expect │ review │ gates │ idem │ ms/rec │ score │            
+├────┼────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼───────┼──────┼────────┼────────┼───────┼──────┼────────┼───────┼────────────┤
+  1 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=on   │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  15.17 │  91.0 │ █████████▏ 
+  2 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=off  │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │   9.58 │  91.0 │ █████████▏ 
+  3 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=label · 2nd-pass=on  │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  15.11 │  91.0 │ █████████▏ 
+  4 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=label · 2nd-pass=off │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │   9.63 │  91.0 │ █████████▏ 
+  5 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=on    │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  16.00 │  91.0 │ █████████▏ 
+  6 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=off   │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  10.18 │  91.0 │ █████████▏ 
+  7 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=label · 2nd-pass=on   │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  16.03 │  91.0 │ █████████▏ 
+  8 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=label · 2nd-pass=off  │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  10.18 │  91.0 │ █████████▏ 
+  9 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=on     │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  16.10 │  91.0 │ █████████▏ 
+ 10 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=off    │    2 │     0 │    0 │      0 │  85.8% │     ✓ │    ✓ │  10.24 │  91.0 │ █████████▏ 
+└────┴────────────────────────────────────────────────────────────────────────────────────────────────────┴──────┴───────┴──────┴────────┴────────┴───────┴──────┴────────┴───────┴────────────┘
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 2 · FULL RUN MATRIX — every configuration evaluated
+──────────────────────────────────────────────────────────────────────────────
+┌─────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────┬──────┬───────┬──────┬─────┬───────┬────────┬───────┬───────┬────────────────┐
+   # │ configuration                                                                                             │ leak │ trace │ over │ cat │ route │ review │ gates │ score │                
+├─────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼───────┼──────┼─────┼───────┼────────┼───────┼───────┼────────────────┤
+   1 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=on          │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   2 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=off         │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   3 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=label · 2nd-pass=on         │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   4 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=label · 2nd-pass=off        │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   5 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=on           │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   6 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=off          │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   7 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=label · 2nd-pass=on          │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   8 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=label · 2nd-pass=off         │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+   9 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=on            │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  10 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=off           │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  11 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=label · 2nd-pass=on           │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  12 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=label · 2nd-pass=off          │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  13 │ NLP=on · overlap=union · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=on             │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  14 │ NLP=on · overlap=union · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=off            │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  15 │ NLP=on · overlap=union · OCR=on · generalise=default · review=high · style=label · 2nd-pass=on            │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  16 │ NLP=on · overlap=union · OCR=on · generalise=default · review=high · style=label · 2nd-pass=off           │    2 │     0 │    0 │   0 │     0 │  85.8% │     ✓ │  91.0 │ ████████████▊░ 
+  17 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=on            │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  18 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=off           │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  19 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=on           │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  20 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=off          │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  21 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=on             │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  22 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=off            │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  23 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=on            │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  24 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=off           │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  25 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=on              │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  26 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=off             │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  27 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=on             │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  28 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=off            │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  29 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=on               │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  30 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=off              │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  31 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=on              │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  32 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=off             │    2 │     0 │    4 │   0 │     0 │  85.8% │     ✓ │  90.4 │ ████████████▋░ 
+  33 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=on             │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  34 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=off            │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  35 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=high · style=label · 2nd-pass=on            │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  36 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=high · style=label · 2nd-pass=off           │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  37 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=on              │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  38 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=off             │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  39 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=high · style=label · 2nd-pass=on             │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  40 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=high · style=label · 2nd-pass=off            │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  41 │ NLP=on · overlap=union · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=on               │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  42 │ NLP=on · overlap=union · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=off              │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  43 │ NLP=on · overlap=union · OCR=off · generalise=none · review=high · style=label · 2nd-pass=on              │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  44 │ NLP=on · overlap=union · OCR=off · generalise=none · review=high · style=label · 2nd-pass=off             │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  45 │ NLP=on · overlap=union · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=on                │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  46 │ NLP=on · overlap=union · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=off               │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  47 │ NLP=on · overlap=union · OCR=on · generalise=none · review=high · style=label · 2nd-pass=on               │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  48 │ NLP=on · overlap=union · OCR=on · generalise=none · review=high · style=label · 2nd-pass=off              │    2 │     0 │    6 │   0 │     0 │  85.8% │     ✓ │  90.1 │ ████████████▋░ 
+  49 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=on      │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  50 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=off     │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  51 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=on     │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  52 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=off    │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  53 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=on       │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  54 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=off      │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  55 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=on      │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  56 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=off     │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  57 │ NLP=on · overlap=union · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=on        │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  58 │ NLP=on · overlap=union · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=off       │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  59 │ NLP=on · overlap=union · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=on       │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  60 │ NLP=on · overlap=union · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=off      │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  61 │ NLP=on · overlap=union · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=on         │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  62 │ NLP=on · overlap=union · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=off        │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  63 │ NLP=on · overlap=union · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=on        │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  64 │ NLP=on · overlap=union · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=off       │    2 │     0 │    0 │   0 │     1 │  94.3% │     ✓ │  90.1 │ ████████████▋░ 
+  65 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=on        │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  66 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=off       │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  67 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=on       │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  68 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=off      │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  69 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=on         │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  70 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=off        │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  71 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=on        │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  72 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=off       │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  73 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=on          │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  74 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=off         │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  75 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=on         │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  76 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=off        │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  77 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=on           │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  78 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=off          │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  79 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=on          │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  80 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=off         │    2 │     0 │    4 │   0 │     1 │  94.3% │     ✓ │  89.5 │ ████████████▌░ 
+  81 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=on         │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  82 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=off        │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  83 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=on        │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  84 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=off       │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  85 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=on          │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  86 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=off         │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  87 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=on         │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  88 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=off        │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  89 │ NLP=on · overlap=union · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=on           │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  90 │ NLP=on · overlap=union · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=off          │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  91 │ NLP=on · overlap=union · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=on          │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  92 │ NLP=on · overlap=union · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=off         │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  93 │ NLP=on · overlap=union · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=on            │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  94 │ NLP=on · overlap=union · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=off           │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  95 │ NLP=on · overlap=union · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=on           │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  96 │ NLP=on · overlap=union · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=off          │    2 │     0 │    6 │   0 │     1 │  94.3% │     ✓ │  89.3 │ ████████████▌░ 
+  97 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=on       │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+  98 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=off      │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+  99 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=on        │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+ 100 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=off       │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+ 101 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=on         │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+ 102 │ NLP=on · overlap=union · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=off        │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+ 103 │ NLP=on · overlap=union · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=on          │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+ 104 │ NLP=on · overlap=union · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=off         │    2 │    62 │    0 │   0 │     0 │  85.8% │     ✓ │  86.4 │ ████████████▏░ 
+ 105 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=on         │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 106 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=off        │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 107 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=on          │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 108 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=off         │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 109 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=on          │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 110 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=off         │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 111 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=on           │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 112 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=off          │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 113 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=on           │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 114 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=off          │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 115 │ NLP=on · overlap=union · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=on            │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 116 │ NLP=on · overlap=union · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=off           │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 117 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=on            │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 118 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=off           │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 119 │ NLP=on · overlap=union · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=on             │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 120 │ NLP=on · overlap=union · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=off            │    2 │    62 │    4 │   0 │     0 │  85.8% │     ✓ │  85.8 │ ████████████░░ 
+ 121 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=on   │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 122 │ NLP=on · overlap=longest · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=off  │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 123 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=on    │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 124 │ NLP=on · overlap=longest · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=off   │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 125 │ NLP=on · overlap=union · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=on     │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 126 │ NLP=on · overlap=union · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=off    │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 127 │ NLP=on · overlap=union · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=on      │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 128 │ NLP=on · overlap=union · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=off     │    2 │    62 │    0 │   0 │     1 │  94.3% │     ✓ │  85.5 │ ███████████▉░░ 
+ 129 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=on     │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 130 │ NLP=on · overlap=longest · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=off    │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 131 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=on      │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 132 │ NLP=on · overlap=longest · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=off     │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 133 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=on      │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 134 │ NLP=on · overlap=longest · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=off     │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 135 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=on       │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 136 │ NLP=on · overlap=longest · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=off      │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 137 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=on       │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 138 │ NLP=on · overlap=union · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=off      │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 139 │ NLP=on · overlap=union · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=on        │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 140 │ NLP=on · overlap=union · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=off       │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 141 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=on        │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 142 │ NLP=on · overlap=union · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=off       │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 143 │ NLP=on · overlap=union · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=on         │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 144 │ NLP=on · overlap=union · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=off        │    2 │    62 │    4 │   0 │     1 │  94.3% │     ✓ │  85.0 │ ███████████▉░░ 
+ 145 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=on         │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 146 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=high · style=label · 2nd-pass=on        │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 147 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=on          │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 148 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=high · style=label · 2nd-pass=on         │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 149 │ NLP=off · overlap=union · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=on           │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 150 │ NLP=off · overlap=union · OCR=off · generalise=default · review=high · style=label · 2nd-pass=on          │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 151 │ NLP=off · overlap=union · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=on            │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 152 │ NLP=off · overlap=union · OCR=on · generalise=default · review=high · style=label · 2nd-pass=on           │    4 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │  -9.6 │ ░░░░░░░░░░░░░░ 
+ 153 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=on           │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 154 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=on          │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 155 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=on            │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 156 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=on           │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 157 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=on             │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 158 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=on            │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 159 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=on              │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 160 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=on             │    4 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 161 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=on     │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 162 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=on    │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 163 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=on      │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 164 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=on     │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 165 │ NLP=off · overlap=union · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=on       │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 166 │ NLP=off · overlap=union · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=on      │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 167 │ NLP=off · overlap=union · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=on        │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 168 │ NLP=off · overlap=union · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=on       │    3 │     0 │    0 │   0 │     1 │  94.3% │     ✗ │ -10.1 │ ░░░░░░░░░░░░░░ 
+ 169 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=off        │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 170 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=high · style=label · 2nd-pass=off       │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 171 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=off         │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 172 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=high · style=label · 2nd-pass=off        │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 173 │ NLP=off · overlap=union · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=off          │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 174 │ NLP=off · overlap=union · OCR=off · generalise=default · review=high · style=label · 2nd-pass=off         │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 175 │ NLP=off · overlap=union · OCR=on · generalise=default · review=high · style=mask · 2nd-pass=off           │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 176 │ NLP=off · overlap=union · OCR=on · generalise=default · review=high · style=label · 2nd-pass=off          │    7 │     0 │    1 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 177 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=on            │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 178 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=high · style=label · 2nd-pass=on           │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 179 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=on             │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 180 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=high · style=label · 2nd-pass=on            │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 181 │ NLP=off · overlap=union · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=on              │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 182 │ NLP=off · overlap=union · OCR=off · generalise=none · review=high · style=label · 2nd-pass=on             │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 183 │ NLP=off · overlap=union · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=on               │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 184 │ NLP=off · overlap=union · OCR=on · generalise=none · review=high · style=label · 2nd-pass=on              │    4 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -10.3 │ ░░░░░░░░░░░░░░ 
+ 185 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=on       │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 186 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=on      │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 187 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=on        │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 188 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=on       │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 189 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=on         │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 190 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=on        │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 191 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=on          │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 192 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=on         │    3 │     0 │    4 │   0 │     1 │  94.3% │     ✗ │ -10.7 │ ░░░░░░░░░░░░░░ 
+ 193 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=off          │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 194 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=off         │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 195 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=off           │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 196 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=off          │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 197 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=high · style=mask · 2nd-pass=off            │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 198 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=high · style=label · 2nd-pass=off           │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 199 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=high · style=mask · 2nd-pass=off             │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 200 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=high · style=label · 2nd-pass=off            │    7 │     0 │    4 │   1 │     0 │  85.8% │     ✗ │ -10.8 │ ░░░░░░░░░░░░░░ 
+ 201 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=on        │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 202 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=on       │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 203 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=on         │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 204 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=on        │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 205 │ NLP=off · overlap=union · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=on          │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 206 │ NLP=off · overlap=union · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=on         │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 207 │ NLP=off · overlap=union · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=on           │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 208 │ NLP=off · overlap=union · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=on          │    3 │     0 │    6 │   0 │     1 │  94.3% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 209 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=off           │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 210 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=high · style=label · 2nd-pass=off          │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 211 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=off            │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 212 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=high · style=label · 2nd-pass=off           │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 213 │ NLP=off · overlap=union · OCR=off · generalise=none · review=high · style=mask · 2nd-pass=off             │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 214 │ NLP=off · overlap=union · OCR=off · generalise=none · review=high · style=label · 2nd-pass=off            │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 215 │ NLP=off · overlap=union · OCR=on · generalise=none · review=high · style=mask · 2nd-pass=off              │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 216 │ NLP=off · overlap=union · OCR=on · generalise=none · review=high · style=label · 2nd-pass=off             │    7 │     0 │    6 │   1 │     0 │  85.8% │     ✗ │ -11.0 │ ░░░░░░░░░░░░░░ 
+ 217 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=off    │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 218 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=off   │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 219 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=off     │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 220 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=off    │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 221 │ NLP=off · overlap=union · OCR=off · generalise=default · review=moderate · style=mask · 2nd-pass=off      │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 222 │ NLP=off · overlap=union · OCR=off · generalise=default · review=moderate · style=label · 2nd-pass=off     │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 223 │ NLP=off · overlap=union · OCR=on · generalise=default · review=moderate · style=mask · 2nd-pass=off       │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 224 │ NLP=off · overlap=union · OCR=on · generalise=default · review=moderate · style=label · 2nd-pass=off      │    7 │     0 │    1 │   1 │     1 │  94.3% │     ✗ │ -11.2 │ ░░░░░░░░░░░░░░ 
+ 225 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=off      │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 226 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=off     │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 227 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=off       │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 228 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=off      │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 229 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=moderate · style=mask · 2nd-pass=off        │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 230 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=moderate · style=label · 2nd-pass=off       │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 231 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=moderate · style=mask · 2nd-pass=off         │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 232 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=moderate · style=label · 2nd-pass=off        │    7 │     0 │    4 │   1 │     1 │  94.3% │     ✗ │ -11.6 │ ░░░░░░░░░░░░░░ 
+ 233 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=off       │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 234 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=off      │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 235 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=off        │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 236 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=off       │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 237 │ NLP=off · overlap=union · OCR=off · generalise=none · review=moderate · style=mask · 2nd-pass=off         │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 238 │ NLP=off · overlap=union · OCR=off · generalise=none · review=moderate · style=label · 2nd-pass=off        │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 239 │ NLP=off · overlap=union · OCR=on · generalise=none · review=moderate · style=mask · 2nd-pass=off          │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 240 │ NLP=off · overlap=union · OCR=on · generalise=none · review=moderate · style=label · 2nd-pass=off         │    7 │     0 │    6 │   1 │     1 │  94.3% │     ✗ │ -11.9 │ ░░░░░░░░░░░░░░ 
+ 241 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=on      │    4 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.2 │ ░░░░░░░░░░░░░░ 
+ 242 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=on       │    4 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.2 │ ░░░░░░░░░░░░░░ 
+ 243 │ NLP=off · overlap=union · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=on        │    4 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.2 │ ░░░░░░░░░░░░░░ 
+ 244 │ NLP=off · overlap=union · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=on         │    4 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.2 │ ░░░░░░░░░░░░░░ 
+ 245 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=on        │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 246 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=on         │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 247 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=on         │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 248 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=on          │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 249 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=on          │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 250 │ NLP=off · overlap=union · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=on           │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 251 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=on           │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 252 │ NLP=off · overlap=union · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=on            │    4 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -14.6 │ ░░░░░░░░░░░░░░ 
+ 253 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=on  │    3 │    62 │    0 │   0 │     1 │  94.3% │     ✗ │ -14.7 │ ░░░░░░░░░░░░░░ 
+ 254 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=on   │    3 │    62 │    0 │   0 │     1 │  94.3% │     ✗ │ -14.7 │ ░░░░░░░░░░░░░░ 
+ 255 │ NLP=off · overlap=union · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=on    │    3 │    62 │    0 │   0 │     1 │  94.3% │     ✗ │ -14.7 │ ░░░░░░░░░░░░░░ 
+ 256 │ NLP=off · overlap=union · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=on     │    3 │    62 │    0 │   0 │     1 │  94.3% │     ✗ │ -14.7 │ ░░░░░░░░░░░░░░ 
+ 257 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=off     │    7 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.9 │ ░░░░░░░░░░░░░░ 
+ 258 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=off      │    7 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.9 │ ░░░░░░░░░░░░░░ 
+ 259 │ NLP=off · overlap=union · OCR=off · generalise=default · review=high · style=partial · 2nd-pass=off       │    7 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.9 │ ░░░░░░░░░░░░░░ 
+ 260 │ NLP=off · overlap=union · OCR=on · generalise=default · review=high · style=partial · 2nd-pass=off        │    7 │    62 │    1 │   1 │     0 │  85.8% │     ✗ │ -14.9 │ ░░░░░░░░░░░░░░ 
+ 261 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=on    │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 262 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=on     │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 263 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=on     │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 264 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=on      │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 265 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=on      │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 266 │ NLP=off · overlap=union · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=on       │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 267 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=on       │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 268 │ NLP=off · overlap=union · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=on        │    3 │    62 │    4 │   0 │     1 │  94.3% │     ✗ │ -15.2 │ ░░░░░░░░░░░░░░ 
+ 269 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=off       │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 270 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=off        │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 271 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=off        │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 272 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=off         │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 273 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=high · style=partial · 2nd-pass=off         │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 274 │ NLP=off · overlap=union · OCR=off · generalise=none · review=high · style=partial · 2nd-pass=off          │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 275 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=high · style=partial · 2nd-pass=off          │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 276 │ NLP=off · overlap=union · OCR=on · generalise=none · review=high · style=partial · 2nd-pass=off           │    7 │    62 │    4 │   1 │     0 │  85.8% │     ✗ │ -15.3 │ ░░░░░░░░░░░░░░ 
+ 277 │ NLP=off · overlap=longest · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=off │    7 │    62 │    1 │   1 │     1 │  94.3% │     ✗ │ -15.7 │ ░░░░░░░░░░░░░░ 
+ 278 │ NLP=off · overlap=longest · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=off  │    7 │    62 │    1 │   1 │     1 │  94.3% │     ✗ │ -15.7 │ ░░░░░░░░░░░░░░ 
+ 279 │ NLP=off · overlap=union · OCR=off · generalise=default · review=moderate · style=partial · 2nd-pass=off   │    7 │    62 │    1 │   1 │     1 │  94.3% │     ✗ │ -15.7 │ ░░░░░░░░░░░░░░ 
+ 280 │ NLP=off · overlap=union · OCR=on · generalise=default · review=moderate · style=partial · 2nd-pass=off    │    7 │    62 │    1 │   1 │     1 │  94.3% │     ✗ │ -15.7 │ ░░░░░░░░░░░░░░ 
+ 281 │ NLP=off · overlap=longest · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=off   │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+ 282 │ NLP=off · overlap=longest · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=off    │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+ 283 │ NLP=off · overlap=longest · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=off    │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+ 284 │ NLP=off · overlap=longest · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=off     │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+ 285 │ NLP=off · overlap=union · OCR=off · generalise=dates · review=moderate · style=partial · 2nd-pass=off     │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+ 286 │ NLP=off · overlap=union · OCR=off · generalise=none · review=moderate · style=partial · 2nd-pass=off      │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+ 287 │ NLP=off · overlap=union · OCR=on · generalise=dates · review=moderate · style=partial · 2nd-pass=off      │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+ 288 │ NLP=off · overlap=union · OCR=on · generalise=none · review=moderate · style=partial · 2nd-pass=off       │    7 │    62 │    4 │   1 │     1 │  94.3% │     ✗ │ -16.2 │ ░░░░░░░░░░░░░░ 
+└─────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────┴──────┴───────┴──────┴─────┴───────┴────────┴───────┴───────┴────────────────┘
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 3 · SENSITIVITY — which settings move the needle
+──────────────────────────────────────────────────────────────────────────────
+  NLP         
+    ★ on         ██████████████████████   88.6  n=144, avg leaks=2.0
+      off        ░░░░░░░░░░░░░░░░░░░░░░  -12.2  n=144, avg leaks=5.2
+      → prefer on (Δ +100.8 score vs worst)
+
+  overlap     
+    ★ longest    ██████████████████████   38.2  n=144, avg leaks=3.6
+      union      ██████████████████████   38.2  n=144, avg leaks=3.6
+      → prefer longest (Δ +0.0 score vs worst — tie)
+
+  OCR         
+    ★ off        ██████████████████████   38.2  n=144, avg leaks=3.6
+      on         ██████████████████████   38.2  n=144, avg leaks=3.6
+      → prefer off (Δ +0.0 score vs worst — tie)
+
+  generalise  
+    ★ default    ██████████████████████   38.6  n=96, avg leaks=3.6
+      dates      █████▉░░░░░░░░░░░░░░░░   38.1  n=96, avg leaks=3.6
+      none       ░░░░░░░░░░░░░░░░░░░░░░   37.9  n=96, avg leaks=3.6
+      → prefer default (Δ +0.7 score vs worst)
+
+  review      
+    ★ high       ██████████████████████   38.6  n=144, avg leaks=3.8
+      moderate   ░░░░░░░░░░░░░░░░░░░░░░   37.8  n=144, avg leaks=3.5
+      → prefer high (Δ +0.8 score vs worst)
+
+  style       
+    ★ mask       ██████████████████████   39.7  n=96, avg leaks=3.6
+      label      ██████████████████████   39.7  n=96, avg leaks=3.6
+      partial    ░░░░░░░░░░░░░░░░░░░░░░   35.2  n=96, avg leaks=3.6
+      → prefer mask (Δ +4.5 score vs worst)
+
+  2nd-pass    
+    ★ on         ██████████████████████   38.4  n=144, avg leaks=2.8
+      off        ░░░░░░░░░░░░░░░░░░░░░░   38.0  n=144, avg leaks=4.5
+      → prefer on (Δ +0.4 score vs worst)
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 4 · RECOMMENDED SETTINGS
+──────────────────────────────────────────────────────────────────────────────
+┌──────────────────┬───────────┐
+ setting          │ value     
+├──────────────────┼───────────┤
+ nlp              │ True      
+ nlp_backend      │ gazetteer 
+ overlap_mode     │ longest   
+ ocr_mode         │ False     
+ generalise       │ default   
+ review_threshold │ high      
+ style            │ mask      
+ second_pass      │ True      
+ audience         │ internal  
+ min_confidence   │ 0.0       
+└──────────────────┴───────────┘
+
+  leakage 2/262 (0.8%) — all optional adversarial phrases, 0 mandatory identifiers   traces 0/136   over-redaction 0/142   review 85.8%   score 91.0
+  runner-up: NLP=on · overlap=longest · OCR=off · generalise=default · review=high · style=mask · 2nd-pass=off  (score 91.0)
+
+  per-dataset breakdown
+┌───────────┬─────────┬──────┬───────┬──────┬───────┬─────┬────────┐
+ dataset   │ records │ leak │ trace │ over │ route │ cat │ review 
+├───────────┼─────────┼──────┼───────┼──────┼───────┼─────┼────────┤
+ aps       │      11 │    0 │     0 │    0 │     0 │   0 │  72.7% 
+ citizen   │       9 │    0 │     0 │    0 │     0 │   0 │  77.8% 
+ canonical │       6 │    0 │     0 │    0 │     0 │   0 │  83.3% 
+ benchmark │      80 │    2 │     0 │    0 │     0 │   0 │  88.8% 
+└───────────┴─────────┴──────┴───────┴──────┴───────┴─────┴────────┘
+
+  benchmark per-class recall (weakest first)
+    implication_workplace  █████████████████▍░░░░░░░░ 66.7%
+    implication_person     █████████████████████▋░░░░ 83.3%
+    acn                    ██████████████████████████ 100.0%
+    aps_level              ██████████████████████████ 100.0%
+    aps_unit               ██████████████████████████ 100.0%
+    bsb                    ██████████████████████████ 100.0%
+    centrelink_crn         ██████████████████████████ 100.0%
+    clearance              ██████████████████████████ 100.0%
+    cohort                 ██████████████████████████ 100.0%
+    credit_card            ██████████████████████████ 100.0%
+    cross_field_person     ██████████████████████████ 100.0%
+    dob                    ██████████████████████████ 100.0%
+    drivers_licence        ██████████████████████████ 100.0%
+    email                  ██████████████████████████ 100.0%
+
+  notes
+    all 2 surviving leaks are optional adversarial implicating phrases (heavily misspelled / character-spaced); no mandatory direct identifier escaped
+    review load is high (85.8% of records); the lowest-load run uses review=high at 85.8%
+    transformers is not installed: once trained DeBERTa/mDeBERTa/ModernBERT weights are available, re-run this matrix to compare encoder backends
+
+  sample outputs (winner configuration)
+    APS APS-001  original : Since the takc-over at the Parramatta warrehouse, the Kestral timsheet on our intrant has been broken and nobody told us
+                 redacted : Since the takc-over at the [IMPLICATION], the [INTERNAL TERM] [INTERNAL TERM] on our [INTERNAL TERM] has been broken and
+
+    CLM CLM-101  original : My TFN is 123 456 782, Medicare 2123 45670 1, and Centrelink CRN 234 567 890A. My DOB is 12/03/1985.
+                 redacted : My TFN is *** *** ***, Medicare **** ***** *, and Centrelink CRN *** *** ****. My DOB is 1985.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ leak = identifiers surviving release · trace = 4-char digit / 5-char email fragments surviving · over = benign content destroyed · gate/idempotence failures are penalised
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

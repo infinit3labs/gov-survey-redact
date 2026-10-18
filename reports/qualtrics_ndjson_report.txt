@@ -1,0 +1,76 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ WHS CLAIMS EXPERIENCE · 10 NEW QUALTRICS NDJSON DATASETS — REDACTION REVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ instrument     WHS Claims Experience Survey 2026 (SV_whsClaimsExperience2026)
+ datasets       10 NDJSON exports · 718 responses (82 partial) · 3653 free-text fields
+ output         /Users/code/code/gov_survey_redaction/data/qualtrics_ndjson
+ pipeline       survey profile · second pass on · schema-governed embedded data · IP metadata governed
+ runtime        9.7s total · 73.9 responses/s
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 1 · DATASETS — per-wave effectiveness
+──────────────────────────────────────────────────────────────────────────────
+┌───────────────────────────────┬──────┬──────┬────────┬───────────┬───────────┬────────┬──────┬──────┬──────┬────────┬──────┬─────────┐
+ dataset                       │ resp │ part │ fields │    caught │ mandatory │  chars │ esc1 │ esc2 │ over │ review │   KB │ ms/resp 
+├───────────────────────────────┼──────┼──────┼────────┼───────────┼───────────┼────────┼──────┼──────┼──────┼────────┼──────┼─────────┤
+ wave2026q3_national_baseline  │   96 │    8 │    488 │   293/293 │    100.0% │ 100.0% │    0 │    0 │    0 │    74% │  199 │   13.47 
+ wave2026q3_settled_claims     │   72 │    5 │    372 │   169/169 │    100.0% │ 100.0% │    0 │    0 │    0 │    74% │  145 │   13.62 
+ wave2026q3_escalated_disputes │   68 │    8 │    356 │   247/247 │    100.0% │ 100.0% │    0 │    0 │    0 │    93% │  142 │   14.93 
+ wave2026q3_self_insured       │   64 │    4 │    334 │   236/236 │    100.0% │ 100.0% │    0 │    0 │    0 │    89% │  136 │   14.79 
+ wave2026q4_multilingual       │   60 │    7 │    301 │   169/169 │    100.0% │ 100.0% │    0 │    0 │    0 │    78% │  122 │   14.73 
+ wave2026q4_abandonment_heavy  │   80 │   27 │    384 │   228/228 │    100.0% │ 100.0% │    0 │    0 │    0 │    75% │  156 │   13.60 
+ wave2026q4_contact_optin      │   60 │    5 │    311 │   234/234 │    100.0% │ 100.0% │    0 │    0 │    0 │    88% │  127 │   14.23 
+ wave2025q2_long_tail_archive  │  120 │    7 │    616 │   378/378 │    100.0% │ 100.0% │    0 │    0 │    0 │    85% │  248 │   13.32 
+ wave2026q4_deidentified_pilot │   50 │    4 │    254 │     79/79 │    100.0% │ 100.0% │    0 │    0 │    0 │    56% │   98 │    9.16 
+ wave2026q4_sparse_feedback    │   48 │    7 │    237 │   126/126 │    100.0% │ 100.0% │    0 │    0 │    0 │    69% │   96 │   12.33 
+ Σ ALL                         │  718 │   82 │   3653 │ 2159/2159 │    100.0% │ 100.0% │    0 │    0 │    0 │    79% │ 1468 │   13.52 
+└───────────────────────────────┴──────┴──────┴────────┴───────────┴───────────┴────────┴──────┴──────┴──────┴────────┴──────┴─────────┘
+  esc1 = responses with a missed mandatory identifier on pass 1 · esc2 = still missing after second pass
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 2 · ACCEPTANCE GATES — cumulative across all 10 datasets
+──────────────────────────────────────────────────────────────────────────────
+  PASS  mandatory identifier recall              1.0000   (target ≥ 0.995)
+  PASS  response escape rate                     0.0000   (target ≤ 0.015)
+  PASS  over-redaction rate                      0.0000   (target ≤ 0.005)
+  PASS  post-review escape rate                  0.0000   (target ≤ 0.015)
+
+  VERDICT: PASS — every wave is safe to release after the review flow
+  embedded claims data governed: 2732/2732   · IP metadata masked: 718/718   · idempotence failures: 0   · round-trip failures: 0
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 3 · PER-CLASS IDENTIFIER RECALL (all datasets)
+──────────────────────────────────────────────────────────────────────────────
+    address                ██████████████████████████ 100.0%  n=89
+    bsb                    ██████████████████████████ 100.0%  n=78
+    centrelink_crn         ██████████████████████████ 100.0%  n=14
+    claim_reference        ██████████████████████████ 100.0%  n=77
+    contact_email          ██████████████████████████ 100.0%  n=280
+    contact_name           ██████████████████████████ 100.0%  n=280
+    contact_phone          ██████████████████████████ 100.0%  n=221
+    email                  ██████████████████████████ 100.0%  n=103
+    employee_id            ██████████████████████████ 100.0%  n=80
+    medicare               ██████████████████████████ 100.0%  n=14
+    organisation           ██████████████████████████ 100.0%  n=353
+    person_name            ██████████████████████████ 100.0%  n=354
+    phone                  ██████████████████████████ 100.0%  n=129
+    site                   ██████████████████████████ 100.0%  n=78
+    tfn                    ██████████████████████████ 100.0%  n=9
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 4 · ARTIFACTS
+──────────────────────────────────────────────────────────────────────────────
+    10 NDJSON exports + ground-truth sidecars + instrument.json + manifest.json written under /Users/code/code/gov_survey_redaction/data/qualtrics_ndjson
+      wave2026q3_national_baseline.ndjson
+      wave2026q3_settled_claims.ndjson
+      wave2026q3_escalated_disputes.ndjson
+      …
+
+──────────────────────────────────────────────────────────────────────────────
+ ▌ 5 · NOTES
+──────────────────────────────────────────────────────────────────────────────
+    82 partial responses exercised missing-answer handling end to end
+    every NDJSON export round-tripped through the Qualtrics reader
+    review load is 79% with the untrained gazetteer backend; trained encoder weights will lower confidence-driven routing
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

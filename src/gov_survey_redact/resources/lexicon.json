@@ -1,0 +1,863 @@
+{
+  "max_distance": 1,
+  "terms": [
+    {
+      "term": "enterprise agreement",
+      "category": "award",
+      "aliases": [
+        "eba",
+        "our eba",
+        "the eba",
+        "enterprise bargaining agreement",
+        "collective agreement",
+        "our enterprise agreement"
+      ],
+      "label": "enterprise agreement"
+    },
+    {
+      "term": "national award",
+      "category": "award",
+      "aliases": [
+        "the modern award",
+        "a modern award",
+        "our modern award"
+      ],
+      "label": "national award"
+    },
+    {
+      "term": "modern award code",
+      "category": "award",
+      "aliases": [
+        "ma000",
+        "the award code",
+        "award code",
+        "modern award reference"
+      ],
+      "label": "award code"
+    },
+    {
+      "term": "MA000098",
+      "category": "award",
+      "aliases": [
+        "aged care award"
+      ],
+      "label": "aged care award"
+    },
+    {
+      "term": "MA000090",
+      "category": "award",
+      "aliases": [
+        "construction general on-site award"
+      ],
+      "label": "construction award"
+    },
+    {
+      "term": "MA000119",
+      "category": "award",
+      "aliases": [
+        "mining exploration award"
+      ],
+      "label": "mining award"
+    },
+    {
+      "term": "MA000141",
+      "category": "award",
+      "aliases": [
+        "security industry award"
+      ],
+      "label": "security award"
+    },
+    {
+      "term": "MA000022",
+      "category": "award",
+      "aliases": [
+        "children's services award",
+        "childrens services award"
+      ],
+      "label": "children's services award"
+    },
+    {
+      "term": "MA000085",
+      "category": "award",
+      "aliases": [
+        "cleaning services award"
+      ],
+      "label": "cleaning award"
+    },
+    {
+      "term": "National Employment Standards",
+      "category": "award",
+      "aliases": [
+        "nes",
+        "the nes"
+      ],
+      "label": "employment standards"
+    },
+    {
+      "term": "Safe Work Australia",
+      "category": "internal_term",
+      "aliases": [
+        "safe work",
+        "swa"
+      ],
+      "label": "national WHS policy body, not a regulator"
+    },
+    {
+      "term": "SafeWork NSW",
+      "category": "internal_term",
+      "aliases": [
+        "safework nsw",
+        "safe work nsw",
+        "nsw regulator"
+      ],
+      "label": "state WHS regulator"
+    },
+    {
+      "term": "WorkSafe Victoria",
+      "category": "internal_term",
+      "aliases": [
+        "worksafe vic",
+        "work safe victoria",
+        "victorian regulator"
+      ],
+      "label": "state WHS regulator"
+    },
+    {
+      "term": "WorkSafe WA",
+      "category": "internal_term",
+      "aliases": [
+        "worksafe western australia",
+        "work safe wa"
+      ],
+      "label": "state WHS regulator"
+    },
+    {
+      "term": "Workplace Health and Safety Queensland",
+      "category": "internal_term",
+      "aliases": [
+        "whsq",
+        "whs queensland",
+        "safe work queensland",
+        "safework qld"
+      ],
+      "label": "state WHS regulator"
+    },
+    {
+      "term": "SafeWork SA",
+      "category": "internal_term",
+      "aliases": [
+        "safe work sa",
+        "safework south australia"
+      ],
+      "label": "state WHS regulator"
+    },
+    {
+      "term": "WorkSafe ACT",
+      "category": "internal_term",
+      "aliases": [
+        "worksafe act",
+        "work safe act"
+      ],
+      "label": "territory WHS regulator"
+    },
+    {
+      "term": "WorkSafe Tasmania",
+      "category": "internal_term",
+      "aliases": [
+        "worksafe tas",
+        "work safe tasmania",
+        "workcover tasmania"
+      ],
+      "label": "state WHS regulator"
+    },
+    {
+      "term": "NT WorkSafe",
+      "category": "internal_term",
+      "aliases": [
+        "worksafe nt",
+        "nt worksafe",
+        "northern territory work safe"
+      ],
+      "label": "territory WHS regulator"
+    },
+    {
+      "term": "Occupational Health and Safety Act",
+      "category": "internal_term",
+      "aliases": [
+        "ohs act",
+        "the ohs act",
+        "occupational health and safety act 2004",
+        "ohs act 2004"
+      ],
+      "label": "Victorian OHS Act, titled OHS not WHS"
+    },
+    {
+      "term": "Work Health and Safety Act 2020",
+      "category": "internal_term",
+      "aliases": [
+        "whs act 2020",
+        "the whs act 2020"
+      ],
+      "label": "Western Australian WHS Act"
+    },
+    {
+      "term": "Work Health and Safety Act 2019",
+      "category": "internal_term",
+      "aliases": [
+        "whs act 2019",
+        "act 2019"
+      ],
+      "label": "ACT WHS Act"
+    },
+    {
+      "term": "Work Health and Safety (National Uniform) Act",
+      "category": "internal_term",
+      "aliases": [
+        "national uniform act",
+        "whs national uniform act"
+      ],
+      "label": "Northern Territory WHS Act"
+    },
+    {
+      "term": "Work Health and Safety Regulation 2025",
+      "category": "internal_term",
+      "aliases": [
+        "whs regulation 2025",
+        "whs regs 2025",
+        "the whs regulation"
+      ],
+      "label": "NSW WHS Regulation"
+    },
+    {
+      "term": "model WHS laws",
+      "category": "internal_term",
+      "aliases": [
+        "model whs act",
+        "model whs regulations",
+        "model whs law",
+        "harmonised whs laws",
+        "harmonised whs legislation"
+      ],
+      "label": "national model WHS law"
+    },
+    {
+      "term": "Workers Rehabilitation and Compensation Act",
+      "category": "internal_term",
+      "aliases": [
+        "tasmanian workers rehabilitation and compensation act",
+        "wrci act"
+      ],
+      "label": "Tasmanian compensation Act"
+    },
+    {
+      "term": "Workplace Injury Rehabilitation and Compensation Act",
+      "category": "internal_term",
+      "aliases": [
+        "wirc act",
+        "victorian workplace injury act"
+      ],
+      "label": "Victorian compensation Act"
+    },
+    {
+      "term": "Safety, Rehabilitation and Compensation Act",
+      "category": "internal_term",
+      "aliases": [
+        "src act",
+        "seac act",
+        "safety rehabilitation and compensation act 1988"
+      ],
+      "label": "Commonwealth compensation Act"
+    },
+    {
+      "term": "Public Service Act 1999",
+      "category": "internal_term",
+      "aliases": [
+        "public service act",
+        "the public service act",
+        "ps act 1999"
+      ],
+      "label": "Commonwealth Public Service Act"
+    },
+    {
+      "term": "Fair Work Act",
+      "category": "internal_term",
+      "aliases": [
+        "the fair work act",
+        "fair work act 2009"
+      ],
+      "label": "national employment legislation"
+    },
+    {
+      "term": "icare",
+      "category": "internal_term",
+      "aliases": [
+        "insurance and care nsw",
+        "icare nsw"
+      ],
+      "label": "NSW compensation scheme"
+    },
+    {
+      "term": "SIRA",
+      "category": "internal_term",
+      "aliases": [
+        "state insurance regulatory authority",
+        "sira nsw"
+      ],
+      "label": "NSW compensation regulator"
+    },
+    {
+      "term": "Workers Compensation Nominal Insurer",
+      "category": "internal_term",
+      "aliases": [
+        "nominal insurer",
+        "workers insurance"
+      ],
+      "label": "NSW nominal insurer"
+    },
+    {
+      "term": "WorkCover Queensland",
+      "category": "internal_term",
+      "aliases": [
+        "workcover qld"
+      ],
+      "label": "Queensland compensation scheme"
+    },
+    {
+      "term": "WorkCover WA",
+      "category": "internal_term",
+      "aliases": [
+        "workcover western australia"
+      ],
+      "label": "Western Australian compensation authority"
+    },
+    {
+      "term": "ReturnToWorkSA",
+      "category": "internal_term",
+      "aliases": [
+        "rtwsa",
+        "return to work sa",
+        "returntoworksa"
+      ],
+      "label": "South Australian compensation scheme"
+    },
+    {
+      "term": "Comcare",
+      "category": "internal_term",
+      "aliases": [
+        "comcare national",
+        "the comcare scheme"
+      ],
+      "label": "Commonwealth compensation scheme"
+    },
+    {
+      "term": "Employees Help Desk",
+      "category": "internal_term",
+      "aliases": [
+        "employees help desk",
+        "ehd",
+        "the ehd",
+        "qld ehd"
+      ],
+      "label": "Queensland scheme agent"
+    },
+    {
+      "term": "Gallagher Bassett",
+      "category": "internal_term",
+      "aliases": [
+        "gallagher bassett claims",
+        "gb claims"
+      ],
+      "label": "workers compensation insurer"
+    },
+    {
+      "term": "Dust Diseases Scheme",
+      "category": "internal_term",
+      "aliases": [
+        "dust diseases scheme of new south wales",
+        "dust diseases authority",
+        "ddd scheme"
+      ],
+      "label": "NSW occupational disease scheme"
+    },
+    {
+      "term": "State Insurance Corporation",
+      "category": "internal_term",
+      "aliases": [
+        "sic",
+        "the sic",
+        "our sic"
+      ],
+      "label": "NSW public sector compensation corporation"
+    },
+    {
+      "term": "person conducting a business or undertaking",
+      "category": "internal_term",
+      "aliases": [
+        "pcbu",
+        "pcbus",
+        "the pcbu",
+        "our pcbu"
+      ],
+      "label": "WHS duty holder"
+    },
+    {
+      "term": "health and safety representative",
+      "category": "internal_term",
+      "aliases": [
+        "hsr",
+        "hsrs",
+        "our hsr",
+        "the hsr",
+        "safety representative"
+      ],
+      "label": "WHS elected representative"
+    },
+    {
+      "term": "designated work group",
+      "category": "internal_term",
+      "aliases": [
+        "dwg",
+        "our dwg",
+        "the dwg"
+      ],
+      "label": "WHS consultation structure"
+    },
+    {
+      "term": "reasonably practicable",
+      "category": "internal_term",
+      "aliases": [
+        "so far as is reasonably practicable",
+        "as reasonably as practicable"
+      ],
+      "label": "WHS legal test"
+    },
+    {
+      "term": "hierarchy of controls",
+      "category": "internal_term",
+      "aliases": [
+        "hierarchy of control",
+        "the hierarchy of control measures"
+      ],
+      "label": "WHS control framework"
+    },
+    {
+      "term": "provisional improvement notice",
+      "category": "internal_term",
+      "aliases": [
+        "pin",
+        "the pin",
+        "our pin",
+        "improvement notice",
+        "prohibition notice"
+      ],
+      "label": "regulator enforcement instrument"
+    },
+    {
+      "term": "psychosocial hazard",
+      "category": "internal_term",
+      "aliases": [
+        "psychosocial hazards",
+        "psychosocial risk",
+        "psychosocial risks"
+      ],
+      "label": "WHS hazard class"
+    },
+    {
+      "term": "incident notification",
+      "category": "internal_term",
+      "aliases": [
+        "notifiable incident",
+        "notifiable incidents",
+        "notify a notifiable incident",
+        "incident notification form",
+        "immediate notification"
+      ],
+      "label": "WHS incident notification duty"
+    },
+    {
+      "term": "engineered stone",
+      "category": "internal_term",
+      "aliases": [
+        "engineered stone benchtops",
+        "engineered stone exemption",
+        "artificial stone benchtops",
+        "silica dust exposure"
+      ],
+      "label": "regulated hazard class"
+    },
+    {
+      "term": "digital work systems",
+      "category": "internal_term",
+      "aliases": [
+        "digital work system",
+        "algorithmic management",
+        "work intensity",
+        "electronic monitoring"
+      ],
+      "label": "regulated psychosocial risk"
+    },
+    {
+      "term": "hazardous manual tasks",
+      "category": "internal_term",
+      "aliases": [
+        "hazardous manual task",
+        "manual handling risk",
+        "repetitive lifting",
+        "musculoskeletal risk"
+      ],
+      "label": "regulated hazard class"
+    },
+    {
+      "term": "major hazard facility",
+      "category": "internal_term",
+      "aliases": [
+        "mhf",
+        "the mhf",
+        "major hazard facility licence"
+      ],
+      "label": "licensed facility class"
+    },
+    {
+      "term": "high risk work licence",
+      "category": "internal_term",
+      "aliases": [
+        "hrw licence",
+        "high risk work ticket",
+        "white card",
+        "green card"
+      ],
+      "label": "individual WHS licence"
+    },
+    {
+      "term": "audiometric testing",
+      "category": "internal_term",
+      "aliases": [
+        "audiometric test",
+        "hearing test program",
+        "noise exposure standard"
+      ],
+      "label": "regulated health monitoring"
+    },
+    {
+      "term": "approved code of practice",
+      "category": "internal_term",
+      "aliases": [
+        "code of practice",
+        "the code of practice",
+        "model code of practice",
+        "managing psychosocial hazards at work"
+      ],
+      "label": "WHS compliance instrument"
+    },
+    {
+      "term": "safe work method statement",
+      "category": "internal_term",
+      "aliases": [
+        "swms",
+        "the swms",
+        "our swms",
+        "swms register",
+        "safe work method statements"
+      ],
+      "label": "site safety document"
+    },
+    {
+      "term": "job safety analysis",
+      "category": "internal_term",
+      "aliases": [
+        "jsa",
+        "the jsa",
+        "our jsa",
+        "jsa register",
+        "job safety analyses"
+      ],
+      "label": "site safety document"
+    },
+    {
+      "term": "hazard identification and risk management",
+      "category": "internal_term",
+      "aliases": [
+        "hirmm",
+        "the hirrm",
+        "our hirmm"
+      ],
+      "label": "risk management framework"
+    },
+    {
+      "term": "risk register",
+      "category": "internal_term",
+      "aliases": [
+        "the risk register",
+        "our risk register",
+        "hazardous manual task list",
+        "hmtl"
+      ],
+      "label": "risk register"
+    },
+    {
+      "term": "safety briefing",
+      "category": "internal_term",
+      "aliases": [
+        "briefing",
+        "the safety briefing",
+        "toolbox talk",
+        "toolbox meeting",
+        "prestart briefing",
+        "daily safety briefing",
+        "toolbox talks"
+      ],
+      "label": "internal safety process"
+    },
+    {
+      "term": "safety management plan",
+      "category": "internal_term",
+      "aliases": [
+        "whs management plan",
+        "whs action plan",
+        "safety plan",
+        "our whs plan",
+        "workplace safety plan"
+      ],
+      "label": "internal safety plan"
+    },
+    {
+      "term": "WHS consultation",
+      "category": "internal_term",
+      "aliases": [
+        "health and safety committee",
+        "hs committee",
+        "safety committee",
+        "whs consultation meeting",
+        "consultation meeting"
+      ],
+      "label": "internal safety committee"
+    },
+    {
+      "term": "incident reporting system",
+      "category": "internal_term",
+      "aliases": [
+        "irs",
+        "our incident system",
+        "the incident system",
+        "incident register",
+        "hazard reporting system"
+      ],
+      "label": "internal incident system"
+    },
+    {
+      "term": "critical incident",
+      "category": "internal_term",
+      "aliases": [
+        "critical incident report",
+        "critical incident response",
+        "critical incidents"
+      ],
+      "label": "internal incident classification"
+    },
+    {
+      "term": "learning management system",
+      "category": "internal_term",
+      "aliases": [
+        "lms",
+        "our lms",
+        "the lms"
+      ],
+      "label": "internal learning system"
+    },
+    {
+      "term": "intranet",
+      "category": "internal_term",
+      "aliases": [
+        "our intranet",
+        "the intranet",
+        "staff intranet"
+      ],
+      "label": "internal intranet"
+    },
+    {
+      "term": "timesheet",
+      "category": "internal_term",
+      "aliases": [
+        "time sheet",
+        "our timesheet system",
+        "timesheets",
+        "the timesheet"
+      ],
+      "label": "internal timesheet system"
+    },
+    {
+      "term": "HR system",
+      "category": "internal_term",
+      "aliases": [
+        "hrms",
+        "our hris",
+        "the hris",
+        "hris"
+      ],
+      "label": "internal HR system"
+    },
+    {
+      "term": "staff portal",
+      "category": "internal_term",
+      "aliases": [
+        "our portal",
+        "the staff portal",
+        "employee portal"
+      ],
+      "label": "internal staff portal"
+    },
+    {
+      "term": "code of conduct",
+      "category": "internal_term",
+      "aliases": [
+        "our code of conduct",
+        "the code of conduct",
+        "behavioural standards",
+        "workplace behaviour standards"
+      ],
+      "label": "internal policy"
+    },
+    {
+      "term": "grievance procedure",
+      "category": "internal_term",
+      "aliases": [
+        "grievance process",
+        "our grievance procedure",
+        "grievance policy",
+        "grievance pathways",
+        "the grievance procedure"
+      ],
+      "label": "internal grievance process"
+    },
+    {
+      "term": "welfare check",
+      "category": "internal_term",
+      "aliases": [
+        "wellbeing check",
+        "wellbeing check in",
+        "the welfare check",
+        "welfare checks"
+      ],
+      "label": "internal wellbeing check"
+    },
+    {
+      "term": "Employee Assistance Program",
+      "category": "internal_term",
+      "aliases": [
+        "eap",
+        "our eap",
+        "employee assistance",
+        "the eap"
+      ],
+      "label": "internal EAP"
+    },
+    {
+      "term": "values and behaviours",
+      "category": "internal_term",
+      "aliases": [
+        "our values",
+        "company values",
+        "our values and behaviours"
+      ],
+      "label": "internal values framework"
+    },
+    {
+      "term": "annual performance review",
+      "category": "internal_term",
+      "aliases": [
+        "performance review",
+        "mid year review",
+        "end of year review",
+        "annual review",
+        "the performance review"
+      ],
+      "label": "internal performance process"
+    },
+    {
+      "term": "performance improvement plan",
+      "category": "internal_term",
+      "aliases": [
+        "pip",
+        "the pip",
+        "our pip",
+        "performance management plan"
+      ],
+      "label": "internal performance process"
+    },
+    {
+      "term": "aged care quality commission",
+      "category": "internal_term",
+      "aliases": [
+        "acqc",
+        "the quality commission"
+      ],
+      "label": "aged care regulator"
+    },
+    {
+      "term": "Serious Incident Response System",
+      "category": "internal_term",
+      "aliases": [
+        "sirs",
+        "the sirs",
+        "sirs report",
+        "sirs response"
+      ],
+      "label": "aged care incident system"
+    },
+    {
+      "term": "National Disability Insurance Scheme",
+      "category": "internal_term",
+      "aliases": [
+        "ndis",
+        "the ndis",
+        "ndis participant",
+        "ndis plan",
+        "behaviour support plan"
+      ],
+      "label": "disability support scheme"
+    },
+    {
+      "term": "Registered Training Organisation",
+      "category": "internal_term",
+      "aliases": [
+        "rto",
+        "our rto",
+        "the rto",
+        "training organisation registration"
+      ],
+      "label": "vocational education registration"
+    },
+    {
+      "term": "National Heavy Vehicle Regulator",
+      "category": "internal_term",
+      "aliases": [
+        "nhvr",
+        "the nhvr",
+        "chain of responsibility",
+        "fatigue management system",
+        "nhvr accreditation"
+      ],
+      "label": "heavy vehicle regulator"
+    },
+    {
+      "term": "Transport Accident Fund Employer Premium",
+      "category": "internal_term",
+      "aliases": [
+        "tafep",
+        "the tafep",
+        "tafep rate",
+        "toll notice"
+      ],
+      "label": "Queensland transport levy"
+    },
+    {
+      "term": "stop work authority",
+      "category": "internal_term",
+      "aliases": [
+        "the stop work"
+      ],
+      "label": "WHS safety process",
+      "exact_only": true
+    }
+  ]
+}

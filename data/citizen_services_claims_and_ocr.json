@@ -1,0 +1,661 @@
+{
+  "dataset_name": "citizen_services_claims_and_ocr",
+  "description": "Citizen services, workers compensation, and reimbursement survey responses containing Australian direct identifiers (TFN, ABN, ACN, Medicare, Centrelink CRN, BSB, Credit Card, Passport, Driver Licence, Address, Phone, Email), OCR-corrupted identifiers from scanned forms, bounding-box geometry, and cross-field household propagation.",
+  "schema_version": "1.0",
+  "records": [
+    {
+      "ResponseId": "R_clm0000",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "reimbursement",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.98,
+      "QID1": "My TFN is 123 456 782, Medicare 2123 45670 1, and Centrelink CRN 234 567 890A. My DOB is 12/03/1985.",
+      "QID2": "Please refund to BSB 062-000 or card 4111 1111 1111 1111. Employer ABN 51 824 753 556 (ACN 004 085 616).",
+      "QID3": "My address is 45 Collins Street, Melbourne VIC 3000 (PO Box 412). Passport PA1234567, Driver licence: 12345678.",
+      "data_quality_issues": [
+        "multiple_direct_au_identifiers_in_free_text",
+        "day_first_australian_date_of_birth"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "123 456 782",
+          "2123 45670 1",
+          "234 567 890A",
+          "12/03/1985",
+          "062-000",
+          "4111 1111 1111 1111",
+          "51 824 753 556",
+          "004 085 616",
+          "45 Collins Street",
+          "VIC 3000",
+          "PO Box 412",
+          "PA1234567",
+          "12345678"
+        ],
+        "must_appear": [
+          "1985"
+        ],
+        "expected_categories": [
+          "tfn",
+          "medicare",
+          "centrelink_crn",
+          "date_au",
+          "bsb",
+          "credit_card",
+          "abn",
+          "acn",
+          "street_address",
+          "postcode",
+          "passport",
+          "drivers_licence"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_clm0001",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "reimbursement-scan-ocr",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.64,
+      "QID1": "TFN: I23 456 782 and second scanned form TFN: 123 456 783.",
+      "QID2": "Employer ABN: 5I 824 753 556.",
+      "QID3": "Reach me on +61 412 345 678 or (02) 9123 4567.",
+      "data_quality_issues": [
+        "ocr_letter_for_digit_corruption (O_for_0, I_for_1)",
+        "ocr_checksum_failure_with_label",
+        "low_ocr_confidence_routing"
+      ],
+      "ocr_layout": {
+        "field": "QID1",
+        "words": [
+          {
+            "text": "TFN:",
+            "start": 0,
+            "end": 4,
+            "confidence": 0.95,
+            "polygon": {
+              "page": 1,
+              "points": [
+                [
+                  12.0,
+                  40.0
+                ],
+                [
+                  45.0,
+                  40.0
+                ],
+                [
+                  45.0,
+                  55.0
+                ],
+                [
+                  12.0,
+                  55.0
+                ]
+              ]
+            }
+          },
+          {
+            "text": "I23 456 782",
+            "start": 5,
+            "end": 16,
+            "confidence": 0.61,
+            "polygon": {
+              "page": 1,
+              "points": [
+                [
+                  50.0,
+                  40.0
+                ],
+                [
+                  140.0,
+                  40.0
+                ],
+                [
+                  140.0,
+                  55.0
+                ],
+                [
+                  50.0,
+                  55.0
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "expectations": {
+        "must_not_appear": [
+          "I23 456 782",
+          "123 456 783",
+          "5I 824 753 556",
+          "+61 412 345 678",
+          "(02) 9123 4567"
+        ],
+        "must_appear": [],
+        "expected_categories": [
+          "tfn",
+          "abn",
+          "phone"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_clm0002",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "household-survey",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.99,
+      "respondent_name": "Aoife Kowalski",
+      "household_members": "Aoife Kowalski; Tomas Kowalski; Lena Kowalski",
+      "street_address": "19B Macquarie Parade",
+      "employer_name": "Halden Holdings",
+      "respondent_email": "aoife.kowalski@mail.com.au",
+      "QID1": "When Tomas Kowalski and I called about our claim at Halden Holdings, the operator read out 19B Macquarie Parade.",
+      "QID2": "Please update Aoife or Lena Kowalski via aoife.kowalski@mail.com.au.",
+      "QID3": "Dr Fiona Whitlam at the clinic also sent the forms.",
+      "data_quality_issues": [
+        "structured_column_repetition_in_narrative",
+        "partial_given_name_and_surname_propagation",
+        "spouse_and_household_roster_propagation"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "Tomas Kowalski",
+          "Aoife",
+          "Lena Kowalski",
+          "Halden Holdings",
+          "19B Macquarie Parade",
+          "aoife.kowalski@mail.com.au",
+          "Dr Fiona Whitlam"
+        ],
+        "must_appear": [
+          "the operator read out"
+        ],
+        "expected_categories": [
+          "name",
+          "organisation_name",
+          "street_address",
+          "email"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_clm0003",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "service-pulse",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.99,
+      "QID1": "Claim CLM-2026-8812 for $1,250.00 under reference 5300000100 is still pending after 4 months.",
+      "QID2": "The app on version 2.4.0.1 and build v1.2.3.4 logged me out when I contacted the claims team.",
+      "QID3": "I have rung the service centre twice and my card was declined at the store.",
+      "data_quality_issues": [
+        "hard_negatives_must_not_trigger_false_positives",
+        "near_miss_abn_and_currency_and_version_strings",
+        "provider_service_units_are_not_employers",
+        "claim_reference_is_now_redacted"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "CLM-2026-8812"
+        ],
+        "must_appear": [
+          "$1,250.00",
+          "5300000100",
+          "2.4.0.1",
+          "v1.2.3.4",
+          "the claims team",
+          "the service centre",
+          "I have rung",
+          "at the store"
+        ],
+        "expected_categories": [
+          "reference_id"
+        ],
+        "expected_review_state": "AUTO_ACCEPTED"
+      }
+    },
+    {
+      "ResponseId": "R_clm0004",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "digital-service",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.99,
+      "QID1": "The claims laptop reported 10.20.30.40 and MAC 00:1B:44:11:3A:B7 during the outage.",
+      "QID2": "The gateway logged 2001:0db8:85a3:0000:0000:8a2e:0370:7334 for my session.",
+      "QID3": "I saved the portal at https://sarah.chen:pw12345@10.20.30.40/login.",
+      "data_quality_issues": [
+        "network_identifiers_ipv4_ipv6_mac",
+        "url_with_embedded_credentials"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "10.20.30.40",
+          "00:1B:44:11:3A:B7",
+          "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+          "sarah.chen:pw12345@"
+        ],
+        "must_appear": [
+          "The claims laptop reported",
+          "during the outage"
+        ],
+        "expected_categories": [
+          "ipv4",
+          "ipv6",
+          "mac",
+          "url_credential"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_clm0005",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "reimbursement",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.97,
+      "QID1": "The Medicare enrolment reference is 2 1234 5678 1 for the family.",
+      "QID2": "Refund to BSB 062-000 account 12345678 please.",
+      "QID3": "You can also use employee ID 88412093 on the form.",
+      "data_quality_issues": [
+        "medicare_enrolment_reference_shape",
+        "bsb_with_bank_account_context",
+        "labelled_employee_id"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "2 1234 5678 1",
+          "062-000",
+          "88412093"
+        ],
+        "must_appear": [
+          "account 12345678",
+          "for the family"
+        ],
+        "expected_categories": [
+          "medicare_enrolment",
+          "bsb",
+          "reference_id"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_clm0006",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "reimbursement-scan-ocr",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.55,
+      "QID1": "TFN: I23 456 782 and ABN: 51 824 753 556.",
+      "QID2": "The scanned second page repeats the employer ABN.",
+      "QID3": "Call the office switchboard if the scan is unclear.",
+      "data_quality_issues": [
+        "multi_page_scan",
+        "ocr_letter_for_digit_corruption",
+        "word_without_polygon_geometry",
+        "low_ocr_confidence_routing"
+      ],
+      "ocr_layout": {
+        "field": "QID1",
+        "expected_pages": [
+          1,
+          2
+        ],
+        "words": [
+          {
+            "text": "TFN:",
+            "start": 0,
+            "end": 4,
+            "confidence": 0.95,
+            "polygon": {
+              "page": 1,
+              "points": [
+                [
+                  12.0,
+                  40.0
+                ],
+                [
+                  45.0,
+                  40.0
+                ],
+                [
+                  45.0,
+                  55.0
+                ],
+                [
+                  12.0,
+                  55.0
+                ]
+              ]
+            }
+          },
+          {
+            "text": "I23 456 782",
+            "start": 5,
+            "end": 16,
+            "confidence": 0.58,
+            "polygon": {
+              "page": 1,
+              "points": [
+                [
+                  50.0,
+                  40.0
+                ],
+                [
+                  140.0,
+                  40.0
+                ],
+                [
+                  140.0,
+                  55.0
+                ],
+                [
+                  50.0,
+                  55.0
+                ]
+              ]
+            }
+          },
+          {
+            "text": "ABN:",
+            "start": 21,
+            "end": 25,
+            "confidence": 0.92
+          },
+          {
+            "text": "51 824 753 556",
+            "start": 26,
+            "end": 40,
+            "confidence": 0.66,
+            "polygon": {
+              "page": 2,
+              "points": [
+                [
+                  10.0,
+                  120.0
+                ],
+                [
+                  150.0,
+                  120.0
+                ],
+                [
+                  150.0,
+                  138.0
+                ],
+                [
+                  10.0,
+                  138.0
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "expectations": {
+        "must_not_appear": [
+          "I23 456 782",
+          "51 824 753 556"
+        ],
+        "must_appear": [
+          "the employer ABN",
+          "if the scan is unclear"
+        ],
+        "expected_categories": [
+          "tfn",
+          "abn"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_clm0007",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "identity-documents",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.98,
+      "QID1": "Passport N1234567 and driver licence: 87654321 were listed.",
+      "QID2": "CRN: 234 567 890A was quoted on the form.",
+      "QID3": "My payroll number is 44556677.",
+      "data_quality_issues": [
+        "identity_document_numbers_with_labels",
+        "crn_with_spacing",
+        "payroll_number"
+      ],
+      "expectations": {
+        "must_not_appear": [
+          "N1234567",
+          "87654321",
+          "234 567 890A",
+          "44556677"
+        ],
+        "must_appear": [
+          "were listed",
+          "was quoted on the form"
+        ],
+        "expected_categories": [
+          "passport",
+          "drivers_licence",
+          "centrelink_crn",
+          "reference_id"
+        ],
+        "expected_review_state": "PENDING_REVIEW"
+      }
+    },
+    {
+      "ResponseId": "R_clm0008",
+      "StartDate": "2026-07-06T09:15:00Z",
+      "EndDate": "2026-07-06T09:31:00Z",
+      "Status": 0,
+      "IPAddress": "203.0.113.17",
+      "Progress": 100,
+      "Duration (in seconds)": 960,
+      "Finished": 1,
+      "RecordedDate": "2026-07-06T09:31:00.000Z",
+      "DistributionChannel": "email",
+      "Instrument": "service-pulse",
+      "Consent": "yes",
+      "UserLanguage": "EN-AU",
+      "ocr_confidence": 0.99,
+      "QID1": "Reference 5300000100 for $1,250.00 is still pending.",
+      "QID2": "The app on version 2.4.0.1 and build v1.2.3.4 logged me out at 24/7 support.",
+      "QID3": "The 002-000 BSB was declined and Order 123 456 783 never arrived.",
+      "data_quality_issues": [
+        "hard_negatives_must_not_trigger_false_positives",
+        "near_miss_abn_and_currency_and_version_strings",
+        "invalid_bsb_prefix",
+        "invalid_unlabelled_tfn"
+      ],
+      "expectations": {
+        "must_not_appear": [],
+        "must_appear": [
+          "$1,250.00",
+          "5300000100",
+          "2.4.0.1",
+          "v1.2.3.4",
+          "24/7",
+          "002-000",
+          "123 456 783"
+        ],
+        "expected_categories": [],
+        "expected_review_state": "AUTO_ACCEPTED"
+      }
+    }
+  ],
+  "qualtrics": {
+    "survey_id": "SV_citizenServicesClaims2026",
+    "name": "Citizen Services Claims & Reimbursement 2026",
+    "metadata_columns": [
+      "StartDate",
+      "EndDate",
+      "Status",
+      "IPAddress",
+      "Progress",
+      "Duration (in seconds)",
+      "Finished",
+      "RecordedDate",
+      "ResponseId",
+      "RecipientLastName",
+      "RecipientFirstName",
+      "RecipientEmail",
+      "ExternalReference",
+      "LocationLatitude",
+      "LocationLongitude",
+      "DistributionChannel",
+      "UserLanguage"
+    ],
+    "embedded_fields": [
+      {
+        "name": "Instrument",
+        "label": "Survey instrument tag",
+        "category": null,
+        "tokenise": false
+      },
+      {
+        "name": "Consent",
+        "label": "Consent option selected on entry",
+        "category": null,
+        "tokenise": false
+      },
+      {
+        "name": "ocr_confidence",
+        "label": "Scan capture confidence for this response",
+        "category": null,
+        "tokenise": false
+      },
+      {
+        "name": "respondent_name",
+        "label": "Sampled respondent name",
+        "category": "name",
+        "tokenise": false
+      },
+      {
+        "name": "household_members",
+        "label": "Household roster on the claim",
+        "category": "name",
+        "tokenise": false
+      },
+      {
+        "name": "street_address",
+        "label": "Residential address on the claim",
+        "category": "street_address",
+        "tokenise": false
+      },
+      {
+        "name": "employer_name",
+        "label": "Employer on the claim",
+        "category": "organisation_name",
+        "tokenise": false
+      },
+      {
+        "name": "respondent_email",
+        "label": "Sampled respondent email",
+        "category": "email",
+        "tokenise": false
+      }
+    ],
+    "questions": [
+      {
+        "qid": "QID1",
+        "export_tag": "claim_details",
+        "question_text": "Tell us about your claim, including any details we should check.",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      },
+      {
+        "qid": "QID2",
+        "export_tag": "payment_details",
+        "question_text": "Where should any refund or reimbursement be paid?",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      },
+      {
+        "qid": "QID3",
+        "export_tag": "contact_details",
+        "question_text": "How can we contact you about this claim?",
+        "qtype": "TE",
+        "selector": "",
+        "force_response": false,
+        "choices": []
+      }
+    ]
+  }
+}

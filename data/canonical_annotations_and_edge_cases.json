@@ -1,0 +1,204 @@
+{
+  "dataset_name": "canonical_annotations_and_edge_cases",
+  "description": "Canonical character-offset ground-truth annotations, reviewer hard-constraint adjudication cases, multilingual/non-English routing cases, low-OCR-confidence routing cases, and long (>512-word) narrative responses for ModernBERT/mDeBERTa second-pass evaluation.",
+  "schema_version": "1.0",
+  "annotations": [
+    {
+      "document_id": "synthetic-study-017:response-00412",
+      "field_id": "Q42_FREE_TEXT",
+      "language": "en",
+      "text": "My doctor is Dr Jane Smith at Example Clinic and my TFN is 123 456 782.",
+      "entities": [
+        {
+          "start_char": 13,
+          "end_char": 26,
+          "entity_type": "PERSON",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 30,
+          "end_char": 44,
+          "entity_type": "EMPLOYER",
+          "risk_tier": "POLICY_DEPENDENT",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 59,
+          "end_char": 70,
+          "entity_type": "TAX_ID",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        }
+      ],
+      "ocr_confidence": null,
+      "template_id": "employment-health-v3",
+      "adjudication_status": "FINAL"
+    },
+    {
+      "document_id": "synthetic-study-017:response-00413",
+      "field_id": "Q43_MULTILINGUAL",
+      "language": "vi",
+      "text": "Tôi làm việc tại Acme Pty Ltd, số điện thoại 0412 345 678, email linh.nguyen@corp.com.au.",
+      "entities": [
+        {
+          "start_char": 17,
+          "end_char": 29,
+          "entity_type": "EMPLOYER",
+          "risk_tier": "POLICY_DEPENDENT",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 45,
+          "end_char": 57,
+          "entity_type": "PHONE",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 65,
+          "end_char": 88,
+          "entity_type": "EMAIL",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        }
+      ],
+      "ocr_confidence": 0.96,
+      "template_id": "multilingual-v1",
+      "adjudication_status": "FINAL"
+    },
+    {
+      "document_id": "synthetic-study-017:response-00414",
+      "field_id": "Q44_OBFUSCATED_AND_LEET",
+      "language": "en",
+      "text": "Report of Bui11ing at Kwinana depot: my supervisor Ahmed told me not to use p r i y a . s i n c l a i r @ m a i l . c o m . a u or call ０４９９ ８８８ ７７７.",
+      "entities": [
+        {
+          "start_char": 22,
+          "end_char": 35,
+          "entity_type": "RARE_ATTRIBUTE",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 37,
+          "end_char": 56,
+          "entity_type": "RARE_ATTRIBUTE",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 76,
+          "end_char": 127,
+          "entity_type": "EMAIL",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 136,
+          "end_char": 148,
+          "entity_type": "PHONE",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        }
+      ],
+      "ocr_confidence": 0.91,
+      "template_id": "adversarial-v1",
+      "adjudication_status": "FINAL"
+    },
+    {
+      "document_id": "synthetic-study-017:response-00415",
+      "field_id": "Q45_LONG_NARRATIVE",
+      "language": "en",
+      "text": "The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. The quarterly staff forum covered roster changes, training gaps, and service demand, and many colleagues said the updates arrived without enough notice. Email me at jane.doe@example.com.au if more detail helps.",
+      "entities": [
+        {
+          "start_char": 3684,
+          "end_char": 3707,
+          "entity_type": "EMAIL",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        }
+      ],
+      "ocr_confidence": null,
+      "template_id": "long-narrative-v1",
+      "adjudication_status": "FINAL",
+      "expect_second_pass_model": "modernbert-base"
+    },
+    {
+      "document_id": "synthetic-study-017:response-00416",
+      "field_id": "Q46_REVIEWER_ADJUDICATED",
+      "language": "en",
+      "text": "My supervisor Priyadarshini signed the roster and my TFN is 123 456 782.",
+      "entities": [
+        {
+          "start_char": 14,
+          "end_char": 27,
+          "entity_type": "PERSON",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 60,
+          "end_char": 71,
+          "entity_type": "TAX_ID",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        }
+      ],
+      "ocr_confidence": null,
+      "template_id": "reviewer-adjudication-v1",
+      "adjudication_status": "FINAL",
+      "reviewer_decision": {
+        "action": "APPROVE",
+        "start_char": 14,
+        "end_char": 27,
+        "category": "name",
+        "reviewer_principal": "alice.reviewer@aps.gov.au",
+        "reason_code": "CONFIRMED_SUPERVISOR_NAME"
+      },
+      "expect_review_state_after_second_pass": "RELEASED"
+    },
+    {
+      "document_id": "synthetic-study-017:response-00417",
+      "field_id": "Q47_MULTILINGUAL_LOW_OCR",
+      "language": "ar",
+      "text": "أعمل في Acme Pty Ltd ورقم هاتفي 0412 345 678.",
+      "entities": [
+        {
+          "start_char": 8,
+          "end_char": 20,
+          "entity_type": "EMPLOYER",
+          "risk_tier": "POLICY_DEPENDENT",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        },
+        {
+          "start_char": 32,
+          "end_char": 44,
+          "entity_type": "PHONE",
+          "risk_tier": "HIGH",
+          "mandatory_redact": true,
+          "annotation_source": "HUMAN_ADJUDICATED"
+        }
+      ],
+      "ocr_confidence": 0.62,
+      "template_id": "multilingual-v1",
+      "adjudication_status": "FINAL",
+      "expect_review_state": "PENDING_REVIEW"
+    }
+  ]
+}
