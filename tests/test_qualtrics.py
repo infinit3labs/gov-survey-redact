@@ -249,7 +249,9 @@ class TestWHSGenerator:
 
 class TestBatchChecker:
     def test_batch_check_passes_gates_and_round_trips(self, tmp_path: Path) -> None:
-        from scripts.qualtrics_batch_check import BatchChecker
+        # scripts/ is not a package, so load it by path like the tests below do.
+        module = _load_script_module("qualtrics_batch_check", "qualtrics_batch_check.py")
+        BatchChecker = module.BatchChecker
 
         batch = WHSBatchGenerator(seed=21, partial_rate=0.15).batch(15, batch_index=0)
         checker = BatchChecker(WHS_CLAIMS_INSTRUMENT)
